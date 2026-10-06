@@ -1,0 +1,815 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NewRequest.master.cs" Inherits="KCCREQUEST2.NewRequest" %>
+
+<%@ import Namespace=" System" %>
+<%@ import Namespace="System.Globalization" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+   
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=IE10">
+    <title>KCC REQUEST</title>
+
+    <meta name="description" content="top menu &amp; navigation" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+     <%-- <link rel="shortcut icon" sizes="32x32" href="images/images (2).png" type="image/jpg" />
+       <link rel="icon" sizes="32x32" href="images/images (2).png" type="image/jpg" />--%>
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <!-- page specific plugin styles -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.custom.min.css" />
+    <link rel="stylesheet" href="assets/css/chosen.min.css" />
+    <!-- text fonts -->
+
+        <link rel="stylesheet" href="assets/css/jquery-ui.custom.min.css" />
+		<link rel="stylesheet" href="assets/css/chosen.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-datepicker3.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-timepicker.min.css" />
+		<link rel="stylesheet" href="assets/css/daterangepicker.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-colorpicker.min.css" />
+
+    <link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+    	<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="Link1" />
+
+    <link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+    <%--  <link rel="stylesheet" href="assets/css/AdminLTE.min.css">--%>
+    <link rel="stylesheet" href="assets/css/annimation.css" />
+    <%--	[if lte IE 9]>--%>
+    <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+
+    <script src="assets/js/ace-extra.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+
+
+    
+</head>
+
+<body class="no-skin">
+
+    <form id="form1" runat="server">
+       <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+</asp:ToolkitScriptManager>
+
+         <style>
+             .modalBackground {
+                 background-color: Black;
+                 filter: alpha(opacity=60);
+                 opacity: 0.6;
+             }
+
+             .modale {
+                 position: fixed;
+                 top: 0;
+                 left: 0;
+                 background-color: black;
+                 z-index: 99;
+                 opacity: 0.5;
+                 filter: alpha(opacity=80);
+                 -moz-opacity: 0.8;
+                 min-height: 100%;
+                 width: 100%;
+             }
+
+             .loading {
+                 font-family: Arial;
+                 font-size: 10pt;
+                 border: 5px solid;
+                 width: 300px;
+                 height: 130px;
+                 display: none;
+                 position: fixed;
+                 background-color: White;
+                 z-index: 999;
+                 border-color: #D9D9D9;
+                 border-radius: 0%
+             }
+
+             #adminpanel:hover {
+                 background-color: rgb(0,177,168)
+             }
+
+             #disablelink:hover {
+                 background-color: transparent;
+             }
+
+             #disablelink2:hover {
+                 background-color: transparent;
+             }
+
+             #disablelink3:hover {
+                 background-color: transparent;
+             }
+
+             #disablelink4:hover {
+                 background-color: transparent;
+             }
+
+             #disablelink5:hover {
+                 background-color: transparent;
+             }
+         </style>
+
+
+
+    <%--    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
+        <!--L'entete d'application-->
+    
+   
+        <div id="navbar" class="navbar navbar-default navbar-collapse navbar-fixed-top h-navbar" style="background-color:rgb(0,177,168)">
+            <!--bar de  titre de l'application-->
+            <div class="navbar-container ace-save-state" id="navbar-container">
+
+                <!-- logo  KCC-->
+                <div class="navbar-buttons navbar-header pull-left  collapse navbar-collapse" role="navigation" >
+                    <ul class="nav ace-nav" >
+                        <li class="light-blue dropdown-modal user-min" >
+                            <a href="default.aspx" class="dropdown-toggle" style="background-color:rgb(0,177,168)">
+                                <img class="nav-user-photo"  src="assets/images/avatars/logo2.png" / style="display:none">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--fin LOGO KCC-->
+
+                <div class="navbar-header pull-left">
+                    <a href="Default_View_MyRequests.aspx" class="navbar-brand">
+                        <small>
+                            <i class="fa fa"></i>
+                            KCC REQUEST
+                            <%--<img src="assets/images/gallery/logook.png" style="width:150px;height:23px">--%>
+                        </small>
+                    </a>
+
+                    <button class="pull-right navbar-toggle navbar-toggle-img collapsed" type="button" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu">
+                        <span class="sr-only">Toggle user menu</span>
+
+                       <%-- <img src="assets/images/avatars/user.jpg" alt="Jason's Photo" />--%>
+                             <asp:Image ID="Image2" runat="server" />
+                    </button>
+
+                    <button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#sidebar">
+                        <span class="sr-only">Toggle sidebar</span>
+
+                        <span class="icon-bar"></span>
+
+                        <span class="icon-bar"></span>
+
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- onglet utilisateur-->
+                <div class="navbar-buttons navbar-header pull-right  collapse navbar-collapse" role="navigation" >
+                    <ul class="nav ace-nav">
+
+
+                        <li style="background-color:#438EB9;color:white">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color:rgb(0,177,168);color:white" >
+                            <i class="flag-icon flag-icon-gb bigger-110 blue" id="flagEnglish" runat="server" visible="false"></i>
+                                 <i class="flag-icon flag-icon-fr bigger-110 blue" id="flagFrancais" runat="server" visible="false"></i>
+                                <asp:Literal ID="lblLanguage" Text="" runat="server"></asp:Literal>
+								<i class="ace-icon fa fa-angle-down bigger-110"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-light-blue dropdown-caret">
+                                 <li runat="server" id="btnEnglais">
+                                    <a href="?Mylang=en-us" runat="server" id="linkEnglishLang">
+                                        <i class="flag-icon flag-icon-gb bigger-110 blue"></i>
+                                    English
+                                    </a>
+                                </li>
+                                <li runat="server" id="btnFrancais">
+                                    <a href="?Mylang=fr-fr" runat="server" id="linkFrenchLang">
+                                        <i class="flag-icon flag-icon-fr bigger-110 blue"></i>
+                                        Français
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        
+                        <li class="light-blue dropdown-modal user-min">
+                                <a data-toggle="dropdown" href="#" class="dropdown-toggle" style="background-color:rgb(0,177,168)">
+                                <%-- <img class="nav-user-photo" src="assets/images/avatars/user.jpg" />--%>
+                                <asp:Image ID="Image1" runat="server" class="nav-user-photo" />
+                                <span class="user-info">
+                                    <%-- <small>Welcome,</small>--%>
+                                    <asp:Label ID="lblNameUser" runat="server" Text=""></asp:Label>
+                                </span>
+
+                                <i class="ace-icon fa fa-caret-down"></i>
+                            </a>
+
+                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                <li>
+                                    <a href="#" id="disablelink" style=" Cursor:text !important; Text-Decoration: None !important;">
+                                        <i class="ace-icon fa fa-user"></i>
+                                        <span class="label arrowed-in" style="background-color:rgb(0,52,104)">
+                                        <asp:Label ID="lbluserAccompt" runat="server" Text="Label"></asp:Label>
+                                    </span>
+                                  </a>
+                                </li>
+
+                                <li>
+                                    <a href="#"  id="disablelink2" style=" Cursor:text !important; Text-Decoration: None !important;">
+                                        <i class="ace-icon fa fa-tag"></i>
+                                        <span class="label  arrowed-in" style="background-color:rgb(0,52,104)">
+                                        <asp:Label ID="lblMatricule" runat="server" Text="Label"></asp:Label>
+                                    </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" id="disablelink3" style=" Cursor:text !important; Text-Decoration: None !important;">
+                                        <i class="ace-icon fa fa-bank"></i>
+                                        <span class="label arrowed-in" style="background-color:rgb(0,52,104)">
+                                        <asp:Label ID="lblDepartment" runat="server" Text="Label"></asp:Label>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" id="disablelink4" style=" Cursor:text !important; Text-Decoration: None !important;">
+                                        <i class="ace-icon fa fa-sitemap"></i>
+                                        <span class="label arrowed-in arrowed-in" style="background-color:rgb(0,52,104)">
+                                        <asp:Label ID="lblFonction" runat="server" Text="Label"></asp:Label>
+                                          </span>
+                                    </a>
+                                </li>
+
+                                <li >
+                                    <a href="#" id="disablelink5" style=" Cursor:text !important; Text-Decoration: None !important;">
+                                        <i class="ace-icon fa fa-envelope"></i>
+                                        <span class="label arrowed-in" style="background-color:rgb(0,52,104)">
+                                        <asp:Label ID="lblAdresseBook" runat="server" Text="Label"></asp:Label>
+                                        </span>
+                                    </a>
+                                </li>
+                            
+                                  <li>
+                                   <div class="well well-sm" style="color:black; height:50px"> <asp:Label ID="Label1" runat="server" Text="<%$ Resources:LocalizedText, lblMyHomePage%>"></asp:Label> </div>
+                                </li>
+                                
+                                <li>
+                                    
+                                         <span class="label label-default label-white middle" style="height:100%">
+                                                <asp:RadioButton ID="rdAllmyrequests" Text="<%$ Resources:LocalizedText, smenuMyallRequest%>" AutoPostBack="true" runat="server" GroupName="homepage" OnCheckedChanged="rdAllmyrequests_CheckedChanged" /> 
+                                      </span>
+                                    
+                                </li>
+                                
+                                <li>
+                                   
+                                      <span class="label label-default label-white middle" style="height:100%">
+                                                <asp:RadioButton ID="rdAllrequestApproval" Text="<%$ Resources:LocalizedText, smenuAllRequestAppr%>" AutoPostBack="true" runat="server" GroupName="homepage" OnCheckedChanged="rdAllrequestApproval_CheckedChanged" /> <%-- rdAllrequestApproval --- Value = 3--%>
+                                   </span>
+                                           
+                                </li>
+
+                                <li style="display:none">
+                                    <a href="#">
+                                                <asp:RadioButton ID="rdAllmodules" Text="All modules" AutoPostBack="true" runat="server" GroupName="homepage" OnCheckedChanged="rdAllmodules_CheckedChanged" /> <%-- rdAllmodules --- Value = 1--%>
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li class="">
+                                    <a href="Admin/default_admin.aspx" target="_blank" id="adminpanel">
+                                        <i class="ace-icon fa fa-database"></i>
+                                  <asp:Label ID="Label8" runat="server" Text="<%$ Resources:LocalizedText, lblpanelAdmin%>"></asp:Label></a>
+                                </li>
+
+                                <li id="itSnow">                                        
+                                    <a href="https://glencorecopper.service-now.com" id="servicenow-link" target="_blank">
+                                        <i class="ace-icon fa fa-desktop"></i>
+                                        <asp:Label ID="Label6" runat="server" Text="SNOW - IT Agent"></asp:Label>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+                <!--fin onglet utilisateur-->
+
+                <nav role="navigation" class="navbar-menu pull-left collapse navbar-collapse">
+                    <!--bloc des menu de l'aide-->
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <asp:Literal ID="menuHelp" Text="<%$ Resources:LocalizedText, menuHelp%>" runat="server"></asp:Literal>
+	  		&nbsp;
+								<i class="ace-icon fa fa-angle-down bigger-110"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-light-blue dropdown-caret">
+                                 <li>
+                                    <a href="images/KCC REQUEST User Guide Final English.pdf" target="_blank">
+                                        <i class="ace-icon fa fa-book bigger-110 blue"></i>
+                                    Manual User Guide (English)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="images/KCC REQUEST Manuel utilisateur FR.pdf" target="_blank">
+                                        <i class="ace-icon fa fa-book bigger-110 blue"></i>
+                                        Documentation(Français)
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown user user-menu">
+                            <span class="dropdown-toggle">
+                                <g style="font-size: 30px; color: #fff;"><g>
+                            </span>
+                        </li>
+
+                    </ul>
+                    <!--fin bloc menu aide-->
+                </nav>
+            </div>
+            <!--fin bar de titre-->
+        </div>
+
+
+      
+        <div class="main-container ace-save-state" id="main-container">
+              <!--bloc des onglets generale de l'application-->
+            <script type="text/javascript">
+                //try { ace.settings.loadState('main-container') } catch (e) { }
+            </script>
+
+            <div id="sidebar" class="sidebar      h-sidebar                navbar-collapse collapse          ace-save-state">
+                <script type="text/javascript">
+                    //try { ace.settings.loadState('sidebar') } catch (e) { }
+                </script>
+
+                <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+                   
+                </div>
+              
+
+                <ul class="nav nav-list">
+                    
+                    <!--ongle Home-->
+                    <li class="hover">
+                        <a href="default.aspx">
+                            <i class="menu-icon fa fa-home"></i>
+                            <span class="menu-text">
+                                   <asp:Literal ID="menuHome" Text="<%$ Resources:LocalizedText, menuHome%>" runat="server"></asp:Literal>
+                            </span>
+                        </a>
+                        <b class="arrow fa fa-angle-down"></b>
+                        <b class="arrow"></b>
+                    </li>
+                    <!--fin menu-->
+
+                    <!--onglet NEW REQUEST-->
+                    <li class="active open  hover" id="newRequest" runat="server">
+                       <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-envelope"></i>
+                            <span class="menu-text">
+                                   <asp:Literal ID="menuNewRequest" Text="<%$ Resources:LocalizedText, menuNewRequest%>" runat="server"></asp:Literal>
+
+                            </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <!--sous onglet ITRequest-->
+                         <ul class="submenu" id="lstmenumodule">
+
+                            <li class="hover">
+                                <a href="New_EWORequest.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                 <asp:Label ID="Label2" runat="server" ToolTip="<%$ Resources:LocalizedText, infobulleWorkRequest%>"  Text="<%$ Resources:LocalizedText, lblElectroniqueWorkRequest%>"></asp:Label>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                             <li class="hover">
+                                <a href="New_ITProblem.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                             <asp:Label ID="Label3" runat="server" ToolTip="<%$ Resources:LocalizedText, infobulleItProblem%>" Text="<%$ Resources:LocalizedText, lblITProblem%>"></asp:Label>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="hover">
+                                <a href="New_ITRequest.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                 <asp:Label ID="Label4" runat="server" ToolTip="<%$ Resources:LocalizedText, infobulleItRequest%>" Text="<%$ Resources:LocalizedText, lblITRequest%>"></asp:Label>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="hover">
+                                <a href="New_DSKRequest.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                <asp:Label ID="Label5" runat="server" ToolTip="<%$ Resources:LocalizedText, infobulleDSKRequest%>" Text="<%$ Resources:LocalizedText, lblRadioRequest%>"></asp:Label>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                                <%--<li class="hover">
+                                <a href="New_HrApproval.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                             <asp:Label ID="Label6" runat="server" ToolTip="<%$ Resources:LocalizedText, infobulleHrRequest%>" Text="<%$ Resources:LocalizedText, lblRecruitmentRequest%>"></asp:Label>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>--%>
+
+                            <li class="hover">
+                                <a href="TrainingCalendar.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                  <asp:Label ID="Label7" runat="server" ToolTip="<%$ Resources:LocalizedText, infobulleTrainingRequest%>" Text="<%$ Resources:LocalizedText, lblTrainingRequest%>"></asp:Label>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                             <li class="hover">
+                                <a href="New_TRANSRequest.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                  <asp:Label ID="Label9" runat="server" Text="<%$ Resources:LocalizedText, lblTransportRequest%>"></asp:Label>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+
+                                    <li class="hover">
+                                <a href="New_DCRequest.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                  <asp:Label ID="Label10" runat="server" Text="<%$ Resources:LocalizedText, lblDCRequest%>"></asp:Label>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+<%--
+                                <li class="hover">
+                                <a href="New_MCRequest.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                  <asp:Label ID="Label11" runat="server" Text="<%$ Resources:LocalizedText, lblbonentree%>"></asp:Label>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+
+                           <li class="hover">
+                                <a href="New_MCRequest_S.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                  <asp:Label ID="Label12" runat="server" Text="<%$ Resources:LocalizedText, lblbonsortie%>"></asp:Label>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>--%>
+
+                              <%-- <li class="hover">
+                                <a href="New_DeviceRegistration.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                  <asp:Label ID="Label6" runat="server" Text="<%$ Resources:LocalizedText, lbldeviceenregister%>"></asp:Label>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>--%>
+                        </ul>
+                        <!--Fin sous menu-->
+                    </li>
+                    <!--Fin onglet IT REQUEST-->
+
+                    <!--ONGLET VIEW REQUEST-->
+                    <li class="hover">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-eye"></i>
+                            <span class="menu-text">
+                          <asp:Literal ID="menuViewRequest" Text="<%$ Resources:LocalizedText, menuViewRequest%>" runat="server"></asp:Literal>
+
+                            </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                       <!--SOUS ONGLET-->
+                         <ul class="submenu">
+                             <li class="hover">
+                                <a href="My_RequestToAproval.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                  <asp:Literal ID="smenuAllRequestAppr" Text="<%$ Resources:LocalizedText, smenuAllRequestAppr%>" runat="server"></asp:Literal>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                               <li class="hover" runat="server" id="menuHold">
+                                <a href="My_RequestToAprovalHold.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    <%--All Requests to Approve--%>
+                                       <asp:Literal ID="Literal2" Text="<%$ Resources:LocalizedText, smenuAllRequestApprHold%>" runat="server"></asp:Literal>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="hover">
+                                <a href="My_allRequest.aspx">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                        <asp:Literal ID="smenuMyallRequest" Text="<%$ Resources:LocalizedText, smenuMyallRequest%>" runat="server"></asp:Literal>
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    <!--FIN SOUS ONGLET-->
+                    </li>
+                    <!--Fin onglet-->
+
+
+                    <!--ONGLET REPORT REQUEST-->
+                    <li class="hover">
+                       <a href="ViewReports.aspx" >
+                            <i class="menu-icon fa fa-tachometer"></i>
+                            <span class="menu-text">
+                           <asp:Literal ID="menuReports" Text="<%$ Resources:LocalizedText, menuReports%>" runat="server"></asp:Literal>
+
+                            </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <!--SOUS ONGLET-->
+                      
+                        <!--FIN SOUS ONGLET-->
+                    </li>
+                    <!--onglet Out of Office-->
+                    <li class="hover">
+                        <a href="_OutOfOffice.aspx">
+                            <i class="menu-icon fa fa-sign-out"></i>
+                            <span class="menu-text">
+                                <asp:Literal ID="Literal1" Text="<%$ Resources:LocalizedText, lblOutOfOffice%>" runat="server"></asp:Literal>
+                            </span>
+                        </a>
+                        <b class="arrow fa fa-angle-down"></b>
+                        <b class="arrow"></b>
+                    </li>
+                    <!--fin onglet Out of office-->
+                    <!--FIN ONGLET-->
+
+                </ul>
+              
+
+                 
+            </div>
+
+            <!--FIN BLOC DES ONGLETS GENERAUX-->
+
+            
+             <!--onglet seeting-->
+            <div class="ace-settings-container" id="ace-settings-container" style="display:none">
+							<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+								<i class="ace-icon fa fa-cog bigger-130"></i>
+							</div>
+            <div class="ace-settings-box clearfix" id="ace-settings-box">
+								<div class="pull-left width-50">
+									<div class="ace-settings-item">
+										<div class="pull-left">
+											<select id="skin-colorpicker" class="hide">
+												<option data-skin="no-skin" value="#438EB9">#438EB9</option>
+												<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+												<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+												<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+											</select>
+										</div>
+										<span>&nbsp; Choose Skin</span>
+									</div>
+
+									<%--<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-navbar" autocomplete="off" style="display:none" checked/>
+										<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+									</div>--%>
+
+									<div class="ace-settings-item" style="display:none">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-sidebar" autocomplete="off" />
+										<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-breadcrumbs" autocomplete="off" />
+										<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+									</div>
+
+									
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-add-container" autocomplete="off" />
+										<label class="lbl" for="ace-settings-add-container">
+											Inside
+											<b>.container</b>
+										</label>
+									</div>
+								</div><!-- /.pull-left -->
+
+								<div class="pull-left width-50">
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" autocomplete="off" />
+										<label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact" autocomplete="off" />
+										<label class="lbl" for="ace-settings-compact"> Compact Sidebar</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight" autocomplete="off" />
+										<label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
+									</div>
+								</div><!-- /.pull-left -->
+							</div><!-- /.ace-settings-box -->
+
+                            </div>
+           <!--fin onglet seeting-->
+
+
+
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <!--FOOTER DE L'APPLICATION-->
+            <div class="footer">
+                <div class="footer-inner">
+                    <div class="footer-content">
+                        <span class="bigger-120">
+                            <span class="blue bolder">KCC</span>
+                            Application &copy; 
+                             <% Response.Write(DateTime.Now.Year); %>
+                        </span>
+
+
+                    </div>
+                </div>
+            </div>
+            <!--FIN FOOTER-->
+
+
+         
+            
+        </div>
+        <!--FIN DU BLOC CONTAINER-->
+        <a href="Detail_trainingRequest.aspx">Detail_trainingRequest.aspx</a>
+        <asp:LinkButton ID="lnkDummy2" runat="server"></asp:LinkButton>
+        <asp:ModalPopupExtender ID="ModalPopupExtenderEmailSendingError" BehaviorID="mpe2" runat="server"
+            PopupControlID="pnlPopup1" TargetControlID="lnkDummy2" BackgroundCssClass="modalBackground">
+        </asp:ModalPopupExtender>
+        <asp:Panel ID="pnlPopup1" runat="server" CssClass="modal-dialog" Style="display: none">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #BA874F;">
+                    <h3 class="smaller lighter white no-margin">
+                        <asp:Label ID="lblHeader" runat="server" Text=""></asp:Label>
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <h5 class="lighter green no-margin">
+                        <asp:Label ID="LblConfirmation" runat="server"></asp:Label>
+                    </h5>
+                    <h5 class="text-muted lighter no-margin">
+                        <asp:Label ID="lblDetaiError" runat="server"></asp:Label>
+                    </h5>
+
+                </div>
+                <div class="modal-footer">
+                    <asp:Button ID="btnOk2" OnClick="btnOk_Click" class="btn btn-s" runat="server" Text="OK" />
+                </div>
+            </div>
+        </asp:Panel>
+
+      
+
+        <script src="assets/js/jquery-2.1.4.min.js"></script>
+
+      
+        <script type="text/javascript">
+            if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+        </script>
+        <script src="assets/js/bootstrap.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+
+        <!-- ace scripts -->
+        <script src="assets/js/ace-elements.min.js"></script>
+        <script src="assets/js/ace.min.js"></script>
+
+       
+          <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/jquery.MultiFile.js"></script>
+
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/jquery-ui.custom.min.js"></script>
+    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="assets/js/chosen.jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            if (!ace.vars['touch']) {
+                $('.chosen-select').chosen({ allow_single_deselect: true });
+
+
+            }
+
+
+
+                 <% if (lblLanguage.Text != "English")
+        { %>
+
+            var mylist = $('#lstmenumodule');
+            var listitems = mylist.children('li').get();
+            listitems.sort(function (a, b) {
+                var compA = $(a).text().toUpperCase();
+                var compB = $(b).text().toUpperCase();
+                return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+            })
+            $.each(listitems, function (idx, itm) { mylist.append(itm); });
+
+    <%}%>
+        });
+    </script>
+        <script type="text/javascript">
+            function openModal() {
+                $('#my-modal').modal('show');
+            }
+            function openSendMailErrorModal() {
+                $('#SendMailError-modal').modal('show');
+            }
+
+            function openConfirm() {
+
+
+
+
+            }
+
+        </script>
+        <script src="assets/js/jquery-ui.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="assets/js/ace-elements.min.js"></script>
+    <script src="assets/js/ace.min.js"></script>
+
+    <!-- inline scripts related to this page -->
+</form>
+
+<!-- Select2 -->
+<script src="plugins/select2/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="plugins/input-mask/jquery.inputmask.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<!-- date-range-picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+
+
+<script src="fullcalendar/fullcalendar.min.js"></script>
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<link href='FullCalendar/fullcalendar.css' rel='stylesheet' />
+<link href='FullCalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src="Scripts/jquery.MultiFile.js"></script>
+
+
+</body>
+</html>

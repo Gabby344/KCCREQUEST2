@@ -1,0 +1,1910 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{064DF117-DCA4-4446-ACFE-0173DFFC506F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KCCREQUEST2</RootNamespace>
+    <AssemblyName>KCCREQUEST2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="developper, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\developper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Globalization.Calendars, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\NuGet\Plugins\CredentialProvider.Microsoft\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.XML">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.css" />
+    <Content Include="Admin\DC_Request\DCRequest_Requisition.aspx" />
+    <Content Include="Admin\DC_Request\New_DC_ProcessRole.aspx" />
+    <Content Include="Admin\DC_Request\New_DC_ProcessRoleUser.aspx" />
+    <Content Include="Admin\DC_Request\NEW_DC_Status.aspx" />
+    <Content Include="Admin\default_admin.aspx" />
+    <Content Include="Admin\DSK_Request\New_DSK_Item.aspx" />
+    <Content Include="Admin\DSK_Request\New_DSK_ProcessRole.aspx" />
+    <Content Include="Admin\DSK_Request\New_DSK_ProcessRoleUser.aspx" />
+    <Content Include="Admin\DSK_Request\New_DSK_Status.aspx" />
+    <Content Include="Admin\DSK_Request\RequisitionDSK.aspx" />
+    <Content Include="Admin\EW_Request\EWRequestRequisition.aspx" />
+    <Content Include="Admin\EW_Request\NewTask.aspx" />
+    <Content Include="Admin\EW_Request\New_EW_ProcessRole.aspx" />
+    <Content Include="Admin\EW_Request\New_EW_ProcessRoleUser.aspx" />
+    <Content Include="Admin\EW_Request\New_EW_Status.aspx" />
+    <Content Include="Admin\EW_Request\New_EW_TechnicalDepartment.aspx" />
+    <Content Include="Admin\EW_Request\New_WorkType.aspx" />
+    <Content Include="Admin\HR_Request\HRRequisition.aspx" />
+    <Content Include="Admin\HR_Request\New_HR_ProcessRole.aspx" />
+    <Content Include="Admin\HR_Request\New_HR_ProcessRoleUser.aspx" />
+    <Content Include="Admin\HR_Request\New_HR_Status.aspx" />
+    <Content Include="Admin\IT_Request\Admin_DetailITRequest.aspx" />
+    <Content Include="Admin\IT_Request\jquery.dataTables.1.8.3.min.js" />
+    <Content Include="Admin\IT_Request\NewHomeApplication.aspx" />
+    <Content Include="Admin\IT_Request\New_category.aspx" />
+    <Content Include="Admin\IT_Request\New_Item.aspx" />
+    <Content Include="Admin\IT_Request\New_ProcessRole.aspx" />
+    <Content Include="Admin\IT_Request\New_ProcessRole_User.aspx" />
+    <Content Include="Admin\IT_Request\New_service.aspx" />
+    <Content Include="Admin\IT_Request\New_Status.aspx" />
+    <Content Include="Admin\IT_Request\RequisitionitRequest.aspx" />
+    <Content Include="Admin\IT_Request\RequistionRequests.aspx" />
+    <Content Include="Admin\Parametre\CouleurMail.aspx" />
+    <Content Include="Admin\Parametre\ParametreLink.aspx" />
+    <Content Include="Admin\TRANS_Request\NEW_TRANS_Place.aspx" />
+    <Content Include="Admin\TRANS_Request\NEW_TRANS_ProcessRole.aspx" />
+    <Content Include="Admin\TRANS_Request\New_TRANS_ProcessRoleUser.aspx" />
+    <Content Include="Admin\TRANS_Request\NEW_TRANS_Site.aspx" />
+    <Content Include="Admin\TRANS_Request\NEW_TRANS_Status.aspx" />
+    <Content Include="Admin\TRANS_Request\TRANSRequisition.aspx" />
+    <Content Include="Admin\TRN_Request\New_TRN_ProcessRole.aspx" />
+    <Content Include="Admin\TRN_Request\New_TRN_ProcessRoleUser.aspx" />
+    <Content Include="Admin\TRN_Request\New_TRN_Status.aspx" />
+    <Content Include="Admin\TRN_Request\New_TRN_Type.aspx" />
+    <Content Include="Admin\TRN_Request\TrainingIntegrate.aspx" />
+    <Content Include="Admin\TRN_Request\TrainingRequest.aspx" />
+    <Content Include="all_NewRequest.aspx" />
+    <Content Include="assets\css\ace-ie.min.css" />
+    <Content Include="assets\css\ace-part2.min.css" />
+    <Content Include="assets\css\ace-rtl.min.css" />
+    <Content Include="assets\css\ace-skins.min.css" />
+    <Content Include="assets\css\ace.min.css" />
+    <Content Include="assets\css\AdminLTE.css" />
+    <Content Include="assets\css\AdminLTE.min.css" />
+    <Content Include="assets\css\annimation.css" />
+    <Content Include="assets\css\blank.gif" />
+    <Content Include="assets\css\bootstrap-colorpicker.min.css" />
+    <Content Include="assets\css\bootstrap-datepicker3.min.css" />
+    <Content Include="assets\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="assets\css\bootstrap-duallistbox.min.css" />
+    <Content Include="assets\css\bootstrap-editable.min.css" />
+    <Content Include="assets\css\bootstrap-multiselect.min.css" />
+    <Content Include="assets\css\bootstrap-timepicker.min.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\chosen.min.css" />
+    <Content Include="assets\css\colorbox.min.css" />
+    <Content Include="assets\css\daterangepicker.min.css" />
+    <Content Include="assets\css\dropzone.min.css" />
+    <Content Include="assets\css\flags.css" />
+    <Content Include="assets\css\flags.min.css" />
+    <Content Include="assets\css\flags.png" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\fonts.googleapis.com.css" />
+    <Content Include="assets\css\fullcalendar.min.css" />
+    <Content Include="assets\css\index.css" />
+    <Content Include="assets\css\jquery-ui.custom.min.css" />
+    <Content Include="assets\css\jquery-ui.min.css" />
+    <Content Include="assets\css\jquery.gritter.min.css" />
+    <Content Include="assets\css\materialize.css" />
+    <Content Include="assets\css\prettify.min.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\select2.min.css" />
+    <Content Include="assets\css\ui.jqgrid.min.css" />
+    <Content Include="assets\font-awesome\4.5.0\css\font-awesome.min.css" />
+    <Content Include="assets\font-awesome\4.5.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\images\avatars\avatar.png" />
+    <Content Include="assets\images\avatars\avatar1.png" />
+    <Content Include="assets\images\avatars\avatar2.png" />
+    <Content Include="assets\images\avatars\avatar3.png" />
+    <Content Include="assets\images\avatars\avatar4.png" />
+    <Content Include="assets\images\avatars\avatar5.png" />
+    <Content Include="assets\images\avatars\logo%2520kcc2.png" />
+    <Content Include="assets\images\avatars\logo2.png" />
+    <Content Include="assets\images\avatars\profile-pic.jpg" />
+    <Content Include="assets\images\avatars\user.jpg" />
+    <Content Include="assets\images\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="assets\images\bootstrap-colorpicker\alpha.png" />
+    <Content Include="assets\images\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="assets\images\bootstrap-colorpicker\hue.png" />
+    <Content Include="assets\images\bootstrap-colorpicker\saturation.png" />
+    <Content Include="assets\images\email\email1.png" />
+    <Content Include="assets\images\email\email2.png" />
+    <Content Include="assets\images\email\email3.png" />
+    <Content Include="assets\images\email\email4.png" />
+    <Content Include="assets\images\gallery\backgroung.png" />
+    <Content Include="assets\images\gallery\bg.jpg" />
+    <Content Include="assets\images\gallery\computer.jpg" />
+    <Content Include="assets\images\gallery\dsk.jpg" />
+    <Content Include="assets\images\gallery\e1.jpg" />
+    <Content Include="assets\images\gallery\el.jpg" />
+    <Content Include="assets\images\gallery\epi.jpg" />
+    <Content Include="assets\images\gallery\hr.jpg" />
+    <Content Include="assets\images\gallery\hrapproval.png" />
+    <Content Include="assets\images\gallery\image-1.jpg" />
+    <Content Include="assets\images\gallery\image-2.jpg" />
+    <Content Include="assets\images\gallery\image-3.jpg" />
+    <Content Include="assets\images\gallery\image-4.jpg" />
+    <Content Include="assets\images\gallery\image-5.jpg" />
+    <Content Include="assets\images\gallery\image-6.jpg" />
+    <Content Include="assets\images\gallery\imageFond.jpg" />
+    <Content Include="assets\images\gallery\it.jpg" />
+    <Content Include="assets\images\gallery\logo kcc1.png" />
+    <Content Include="assets\images\gallery\logook.png" />
+    <Content Include="assets\images\gallery\m.jpg" />
+    <Content Include="assets\images\gallery\maritime-radio.jpg" />
+    <Content Include="assets\images\gallery\Materiel-de-location.png" />
+    <Content Include="assets\images\gallery\Mech_Engg1.jpg" />
+    <Content Include="assets\images\gallery\ordinateur.jpg" />
+    <Content Include="assets\images\gallery\recruitment-strategies-of-indian-employers.jpg" />
+    <Content Include="assets\images\gallery\thumb-1.jpg" />
+    <Content Include="assets\images\gallery\thumb-2.jpg" />
+    <Content Include="assets\images\gallery\thumb-3.jpg" />
+    <Content Include="assets\images\gallery\thumb-4.jpg" />
+    <Content Include="assets\images\gallery\thumb-5.jpg" />
+    <Content Include="assets\images\gallery\thumb-6.jpg" />
+    <Content Include="assets\images\gallery\trainingcomputers.jpg" />
+    <Content Include="assets\images\gallery\trainning.jpg" />
+    <Content Include="assets\images\gallery\vente_materiel.jpg" />
+    <Content Include="assets\images\placeholder\165x90.png" />
+    <Content Include="assets\images\placeholder\255x150.png" />
+    <Content Include="assets\images\placeholder\530x270.png" />
+    <Content Include="assets\images\placeholder\550x280.png" />
+    <Content Include="assets\js\ace-editable.min.js" />
+    <Content Include="assets\js\ace-elements.min.js" />
+    <Content Include="assets\js\ace-extra.min.js" />
+    <Content Include="assets\js\ace.min.js" />
+    <Content Include="assets\js\autosize.min.js" />
+    <Content Include="assets\js\bootbox.js" />
+    <Content Include="assets\js\bootstrap-colorpicker.min.js" />
+    <Content Include="assets\js\bootstrap-datepicker.min.js" />
+    <Content Include="assets\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="assets\js\bootstrap-editable.min.js" />
+    <Content Include="assets\js\bootstrap-markdown.min.js" />
+    <Content Include="assets\js\bootstrap-multiselect.min.js" />
+    <Content Include="assets\js\bootstrap-tag.min.js" />
+    <Content Include="assets\js\bootstrap-timepicker.min.js" />
+    <Content Include="assets\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\buttons.colVis.min.js" />
+    <Content Include="assets\js\buttons.flash.min.js" />
+    <Content Include="assets\js\buttons.html5.min.js" />
+    <Content Include="assets\js\buttons.print.min.js" />
+    <Content Include="assets\js\chosen.jquery.min.js" />
+    <Content Include="assets\js\dataTables.buttons.min.js" />
+    <Content Include="assets\js\dataTables.select.min.js" />
+    <Content Include="assets\js\daterangepicker.min.js" />
+    <Content Include="assets\js\dropzone.min.js" />
+    <Content Include="assets\js\excanvas.min.js" />
+    <Content Include="assets\js\fullcalendar.min.js" />
+    <Content Include="assets\js\grid.locale-en.js" />
+    <Content Include="assets\js\holder.min.js" />
+    <Content Include="assets\js\html5shiv.min.js" />
+    <Content Include="assets\js\jquery-1.11.3.min.js" />
+    <Content Include="assets\js\jquery-1.8.3.min.js" />
+    <Content Include="assets\js\jquery-2.1.4.min.js" />
+    <Content Include="assets\js\jquery-additional-methods.min.js" />
+    <Content Include="assets\js\jquery-typeahead.js" />
+    <Content Include="assets\js\jquery-ui.custom.min.js" />
+    <Content Include="assets\js\jquery-ui.min.js" />
+    <Content Include="assets\js\jquery.bootstrap-duallistbox.min.js" />
+    <Content Include="assets\js\jquery.colorbox.min.js" />
+    <Content Include="assets\js\jquery.dataTables.bootstrap.min.js" />
+    <Content Include="assets\js\jquery.dataTables.min.js" />
+    <Content Include="assets\js\jquery.easypiechart.min.js" />
+    <Content Include="assets\js\jquery.flot.min.js" />
+    <Content Include="assets\js\jquery.flot.pie.min.js" />
+    <Content Include="assets\js\jquery.flot.resize.min.js" />
+    <Content Include="assets\js\jquery.gritter.min.js" />
+    <Content Include="assets\js\jquery.hotkeys.index.min.js" />
+    <Content Include="assets\js\jquery.inputlimiter.min.js" />
+    <Content Include="assets\js\jquery.jqGrid.min.js" />
+    <Content Include="assets\js\jquery.knob.min.js" />
+    <Content Include="assets\js\jquery.maskedinput.min.js" />
+    <Content Include="assets\js\jquery.mobile.custom.min.js" />
+    <Content Include="assets\js\jquery.MultiFile.js" />
+    <Content Include="assets\js\jquery.MultiFile.pack.js" />
+    <Content Include="assets\js\jquery.nestable.min.js" />
+    <Content Include="assets\js\jquery.raty.min.js" />
+    <Content Include="assets\js\jquery.sparkline.index.min.js" />
+    <Content Include="assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="assets\js\jquery.validate.min.js" />
+    <Content Include="assets\js\markdown.min.js" />
+    <Content Include="assets\js\materialize.js" />
+    <Content Include="assets\js\moment.min.js" />
+    <Content Include="assets\js\ofi.js" />
+    <Content Include="assets\js\prettify.min.js" />
+    <Content Include="assets\js\respond.min.js" />
+    <Content Include="assets\js\select2.min.js" />
+    <Content Include="assets\js\spin.js" />
+    <Content Include="assets\js\spinbox.min.js" />
+    <Content Include="assets\js\tree.min.js" />
+    <Content Include="assets\js\wizard.min.js" />
+    <Content Include="assets\swf\flashExport.swf" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="bx_loader.gif" />
+    <Content Include="Calendar\bootstrap-datepicker.js" />
+    <Content Include="Calendar\bootstrap.min.js" />
+    <Content Include="Calendar\daterangepicker.js" />
+    <Content Include="Calendar\fullcalendar.css" />
+    <Content Include="Calendar\fullcalendar.min.js" />
+    <Content Include="Calendar\fullcalendar.print.css" />
+    <Content Include="Calendar\jQuery-2.2.0.min.js" />
+    <Content Include="Calendar\jquery.inputmask.date.extensions.js" />
+    <Content Include="Calendar\jquery.inputmask.extensions.js" />
+    <Content Include="Calendar\jquery.inputmask.js" />
+    <Content Include="Calendar\jquery.MultiFile.js" />
+    <Content Include="Calendar\select2.full.min.js" />
+    <Content Include="chattest.aspx" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="css\atlas.css" />
+    <Content Include="css\bars.css" />
+    <Content Include="css\bootstrap-markdown.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\chocolat.css" />
+    <Content Include="css\clndr.css" />
+    <Content Include="css\dataTables.bootstrap.min.css" />
+    <Content Include="css\dataTables.bootstrap4.min.css" />
+    <Content Include="css\fabochart.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\icon-font.min.css" />
+    <Content Include="css\jquery.dataTables.1.10.20.css" />
+    <Content Include="css\jquery.dataTables.css" />
+    <Content Include="css\jqvmap.css" />
+    <Content Include="css\popuo-box.css" />
+    <Content Include="css\responsive.bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\vroom.css" />
+    <Content Include="default.aspx" />
+    <Content Include="default5.aspx" />
+    <Content Include="default2.aspx" />
+    <Content Include="Default_View_Approve.aspx" />
+    <Content Include="Default_View_MyRequests.aspx" />
+    <Content Include="Detail_BonSortie.aspx" />
+    <Content Include="New_MCRequest_S.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="Detail_DCRequest.aspx" />
+    <Content Include="Detail_ewoRequest.aspx" />
+    <Content Include="Detail_ItProblem.aspx" />
+    <Content Include="Detail_itRequest.aspx" />
+    <Content Include="Detail_radiorequest.aspx" />
+    <Content Include="Detail_RecruitmentRequest.aspx" />
+    <Content Include="Detail_BonEntree.aspx" />
+    <Content Include="Detail_trainingRequest.aspx" />
+    <Content Include="Detail_TRANSRequest.aspx" />
+    <Content Include="dots.gif" />
+    <Content Include="fonts\digital-7-webfont.svg" />
+    <Content Include="fonts\digital-7_italic-webfont.svg" />
+    <Content Include="fonts\digital-7_mono-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\weathericons-regular-webfont.svg" />
+    <Content Include="form\dskrequest.ascx" />
+    <Content Include="form\ewoRequest.ascx" />
+    <Content Include="form\itrequest.ascx" />
+    <Content Include="form\RecrutmentRequest.ascx" />
+    <Content Include="form\sysaid.ascx" />
+    <Content Include="form\trainingRequest.ascx" />
+    <Content Include="FullCalendar\fullcalendar.css" />
+    <Content Include="FullCalendar\fullcalendar.js" />
+    <Content Include="FullCalendar\fullcalendar.min.css" />
+    <Content Include="FullCalendar\fullcalendar.min.js" />
+    <Content Include="FullCalendar\fullcalendar.print.css" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="FullCalendar\lib\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="FullCalendar\lib\cupertino\jquery-ui.min.css" />
+    <Content Include="FullCalendar\lib\jquery-ui.min.js" />
+    <Content Include="FullCalendar\lib\jquery.min.js" />
+    <Content Include="FullCalendar\lib\moment.min.js" />
+    <Content Include="FullCalendar\loading_wh.gif" />
+    <Content Include="Global.asax" />
+    <Content Include="images\adminpp.jpeg" />
+    <Content Include="images\approve.png" />
+    <Content Include="images\cogs.jpg" />
+    <Content Include="images\custom-icon-cogs1.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\images %281%29.png" />
+    <Content Include="images\images %282%29.png" />
+    <Content Include="images\images3.png" />
+    <Content Include="images\minus.png" />
+    <Content Include="images\plus.png" />
+    <Content Include="images\reject.png" />
+    <Content Include="img-loader.gif" />
+    <Content Include="js\amcharts.js" />
+    <Content Include="js\arbor.js" />
+    <Content Include="js\atlas.js" />
+    <Content Include="js\barChart.jquery.js" />
+    <Content Include="js\bootstrap-markdown.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\cbpFWTabs.js" />
+    <Content Include="js\Chart-pie.js" />
+    <Content Include="js\Chart.js" />
+    <Content Include="js\clndr.js" />
+    <Content Include="js\css3clock.js" />
+    <Content Include="js\CSSPlugin.min.js" />
+    <Content Include="js\datamaps-all.js" />
+    <Content Include="js\dataTables.bootstrap.min.js" />
+    <Content Include="js\dataTables.bootstrap4.min.js" />
+    <Content Include="js\dataTables.responsive.min.js" />
+    <Content Include="js\dygraph-combined.js" />
+    <Content Include="js\fabochart.js" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery.1.8.3.min.js" />
+    <Content Include="js\jquery.chocolat.js" />
+    <Content Include="js\jquery.dataTables.1.10.20.min.js" />
+    <Content Include="js\jquery.dataTables.1.8.3.min.js" />
+    <Content Include="js\jquery.dataTables.min.js" />
+    <Content Include="js\jquery.nicescroll.js" />
+    <Content Include="js\jquery.vmap.js" />
+    <Content Include="js\jquery.vmap.sampledata.js" />
+    <Content Include="js\jquery.vmap.world.js" />
+    <Content Include="js\light.js" />
+    <Content Include="js\map.js" />
+    <Content Include="js\modernizr.custom.04022.js" />
+    <Content Include="js\moment-2.2.1.js" />
+    <Content Include="js\protovis-d3.2.js" />
+    <Content Include="js\radar.js" />
+    <Content Include="js\responsiveslides.min.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="js\serial.js" />
+    <Content Include="js\site.js" />
+    <Content Include="js\skycons.js" />
+    <Content Include="js\TweenLite.min.js" />
+    <Content Include="js\underscore-min.js" />
+    <Content Include="js\vix.js" />
+    <Content Include="js\vroom.js" />
+    <Content Include="loader-1.gif" />
+    <Content Include="loader.gif" />
+    <Content Include="loadersnake.gif" />
+    <Content Include="My_allRequest.aspx" />
+    <Content Include="My_RequestToAproval.aspx" />
+    <Content Include="My_RequestToAprovalHold.aspx" />
+    <Content Include="New_DCRequest.aspx" />
+    <Content Include="New_DSKRequest.aspx" />
+    <Content Include="New_EWORequest.aspx" />
+    <Content Include="New_HrApproval.aspx" />
+    <Content Include="New_DeviceRegistration.aspx" />
+    <Content Include="New_ITRequest.aspx" />
+    <Content Include="New_MCRequest.aspx" />
+    <Content Include="New_TrainingRequest.aspx" />
+    <Content Include="New_TRANSRequest.aspx" />
+    <Content Include="pageAccesError.aspx" />
+    <Content Include="pageError.aspx" />
+    <Content Include="fonts\digital-7-webfont.eot" />
+    <Content Include="fonts\digital-7-webfont.ttf" />
+    <Content Include="fonts\digital-7-webfont.woff" />
+    <Content Include="fonts\digital-7_italic-webfont.eot" />
+    <Content Include="fonts\digital-7_italic-webfont.ttf" />
+    <Content Include="fonts\digital-7_italic-webfont.woff" />
+    <Content Include="fonts\digital-7_mono-webfont.eot" />
+    <Content Include="fonts\digital-7_mono-webfont.ttf" />
+    <Content Include="fonts\digital-7_mono-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\weathericons-regular-webfont.eot" />
+    <Content Include="fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Pluginss\AdminLTE.min.css" />
+    <Content Include="Pluginss\all.css" />
+    <Content Include="Pluginss\app.js" />
+    <Content Include="Pluginss\app.min.js" />
+    <Content Include="Pluginss\bootstrap-colorpicker.min.css" />
+    <Content Include="Pluginss\bootstrap-datepicker.js" />
+    <Content Include="Pluginss\bootstrap-timepicker.min.css" />
+    <Content Include="Pluginss\bootstrap.min.js" />
+    <Content Include="Pluginss\datepicker3.css" />
+    <Content Include="Pluginss\daterangepicker-bs3.css" />
+    <Content Include="Pluginss\daterangepicker.js" />
+    <Content Include="Pluginss\demo.js" />
+    <Content Include="Pluginss\fastclick.js" />
+    <Content Include="Pluginss\icheck.js" />
+    <Content Include="Pluginss\icheck.min.js" />
+    <Content Include="Pluginss\jquery-1.3.2.min.js" />
+    <Content Include="Pluginss\jQuery-2.2.0.min.js" />
+    <Content Include="Pluginss\jquery.fileupload-validate.js" />
+    <Content Include="Pluginss\jquery.inputmask.date.extensions.js" />
+    <Content Include="Pluginss\jquery.inputmask.extensions.js" />
+    <Content Include="Pluginss\jquery.inputmask.js" />
+    <Content Include="Pluginss\jquery.slimscroll.min.js" />
+    <Content Include="Pluginss\select2.full.min.js" />
+    <Content Include="Pluginss\select2.min.css" />
+    <Content Include="Pluginss\_all-skins.min.css" />
+    <Content Include="plugins\datepicker\bootstrap-datepicker.js" />
+    <Content Include="plugins\daterangepicker\daterangepicker.js" />
+    <Content Include="plugins\input-mask\jquery.inputmask.date.extensions.js" />
+    <Content Include="plugins\input-mask\jquery.inputmask.extensions.js" />
+    <Content Include="plugins\input-mask\jquery.inputmask.js" />
+    <Content Include="plugins\jQuery\jQuery-2.2.0.min.js" />
+    <Content Include="plugins\Scripts\jquery.MultiFile.js" />
+    <Content Include="plugins\select2\select2.full.min.js" />
+    <Content Include="Rapports.Master" />
+    <Content Include="images\KCC REQUEST Manuel utilisateur FR.pdf" />
+    <Content Include="images\KCC REQUEST User Guide Final English.pdf" />
+    <None Include="Properties\PublishProfiles\AnyAccessKccRequestLive.pubxml" />
+    <None Include="Properties\PublishProfiles\AnyAccessKccRequestTest.pubxml" />
+    <None Include="Properties\PublishProfiles\LiveAnyAccess.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="SchedulerFlight.aspx" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\configuration.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ActiveState.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CacheRefreshPlan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CacheRefreshPlanState.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CancelJobResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CatalogItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ChangeSubscriptionOwnerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CreateCacheRefreshPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CreateCatalogItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CreateDataDrivenSubscriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CreateDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CreateFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CreateItemHistorySnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CreateLinkedItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CreateReportEditSessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CreateRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CreateScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.CreateSubscriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DataRetrievalPlan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DataSetDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DataSource.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DataSourceDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DataSourcePrompt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DeleteCacheRefreshPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DeleteItemHistorySnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DeleteItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DeleteRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DeleteScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DeleteSubscriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.DisableDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.EnableDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.Event.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ExpirationDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.Extension.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ExtensionParameter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ExtensionSettings.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.FindItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.FireEventResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.FlushCacheResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GenerateModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetCacheOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetCacheRefreshPlanPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetDataDrivenSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetDataSourceContentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetExecutionOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetExtensionSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetItemDataSourcePromptsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetItemDataSourcesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetItemDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetItemHistoryLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetItemHistoryOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetItemLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetItemParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetItemReferencesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetItemTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetModelItemPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetModelItemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetReportServerConfigInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetRolePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetSchedulePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetSystemPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetSystemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetSystemPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.GetUserModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.InheritModelItemParentSecurityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.InheritParentSecurityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.IsSSLRequiredResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ItemHistorySnapshot.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ItemParameter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ItemReferenceData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.Job.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListCacheRefreshPlansResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListChildrenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListDatabaseCredentialRetrievalOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListDependentItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListEventsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListExecutionSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListExtensionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListExtensionTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListItemHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListItemTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListJobActionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListJobsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListJobStatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListJobTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListModelDrillthroughReportsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListModelItemChildrenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListModelItemTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListModelPerspectivesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListMySubscriptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListParameterStatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListParameterTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListParentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListRolesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListScheduledItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListScheduleStatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListSecurityScopesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListSubscriptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListSubscriptionsUsingDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ListTasksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.LogoffResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.LogonUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ModelCatalogItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ModelDrillthroughReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ModelItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.MoveItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ParameterValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ParameterValueOrFieldReference.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.PauseScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.Policy.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.PrepareQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.Property.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.RegenerateModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.RemoveAllModelItemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ResumeScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.Role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.Schedule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ScheduleDefinitionOrReference.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ServerInfoHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetCacheOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetCacheRefreshPlanPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetDataDrivenSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetDataSourceContentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetExecutionOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetItemDataSourcesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetItemDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetItemHistoryLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetItemHistoryOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetItemLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetItemParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetItemReferencesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetModelDrillthroughReportsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetModelItemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetRolePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetSchedulePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetSystemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.SetSystemPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.Subscription.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.Task.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.TestConnectForDataSourceDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.TestConnectForItemDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.UpdateItemExecutionSnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.ValidateExtensionSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\KCCREQUEST2.ServiceReference1.Warning.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="New_ITProblem.aspx" />
+    <Content Include="TrainingCalendar.aspx" />
+    <Content Include="UC_DetailITRequest.ascx" />
+    <Content Include="ViewReports.aspx" />
+    <Content Include="View_DCRequest.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebForm2.aspx" />
+    <Content Include="_OutOfOffice.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\DC_Request\DCRequest_Requisition.aspx.cs">
+      <DependentUpon>DCRequest_Requisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DC_Request\DCRequest_Requisition.aspx.designer.cs">
+      <DependentUpon>DCRequest_Requisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DC_Request\New_DC_ProcessRole.aspx.cs">
+      <DependentUpon>New_DC_ProcessRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DC_Request\New_DC_ProcessRole.aspx.designer.cs">
+      <DependentUpon>New_DC_ProcessRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DC_Request\New_DC_ProcessRoleUser.aspx.cs">
+      <DependentUpon>New_DC_ProcessRoleUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DC_Request\New_DC_ProcessRoleUser.aspx.designer.cs">
+      <DependentUpon>New_DC_ProcessRoleUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DC_Request\NEW_DC_Status.aspx.cs">
+      <DependentUpon>NEW_DC_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DC_Request\NEW_DC_Status.aspx.designer.cs">
+      <DependentUpon>NEW_DC_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\default_admin.aspx.cs">
+      <DependentUpon>default_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\default_admin.aspx.designer.cs">
+      <DependentUpon>default_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DSK_Request\New_DSK_Item.aspx.cs">
+      <DependentUpon>New_DSK_Item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DSK_Request\New_DSK_Item.aspx.designer.cs">
+      <DependentUpon>New_DSK_Item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DSK_Request\New_DSK_ProcessRole.aspx.cs">
+      <DependentUpon>New_DSK_ProcessRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DSK_Request\New_DSK_ProcessRole.aspx.designer.cs">
+      <DependentUpon>New_DSK_ProcessRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DSK_Request\New_DSK_ProcessRoleUser.aspx.cs">
+      <DependentUpon>New_DSK_ProcessRoleUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DSK_Request\New_DSK_ProcessRoleUser.aspx.designer.cs">
+      <DependentUpon>New_DSK_ProcessRoleUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DSK_Request\New_DSK_Status.aspx.cs">
+      <DependentUpon>New_DSK_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DSK_Request\New_DSK_Status.aspx.designer.cs">
+      <DependentUpon>New_DSK_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DSK_Request\RequisitionDSK.aspx.cs">
+      <DependentUpon>RequisitionDSK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DSK_Request\RequisitionDSK.aspx.designer.cs">
+      <DependentUpon>RequisitionDSK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EW_Request\EWRequestRequisition.aspx.cs">
+      <DependentUpon>EWRequestRequisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EW_Request\EWRequestRequisition.aspx.designer.cs">
+      <DependentUpon>EWRequestRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EW_Request\NewTask.aspx.cs">
+      <DependentUpon>NewTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EW_Request\NewTask.aspx.designer.cs">
+      <DependentUpon>NewTask.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EW_Request\New_EW_ProcessRole.aspx.cs">
+      <DependentUpon>New_EW_ProcessRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EW_Request\New_EW_ProcessRole.aspx.designer.cs">
+      <DependentUpon>New_EW_ProcessRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EW_Request\New_EW_ProcessRoleUser.aspx.cs">
+      <DependentUpon>New_EW_ProcessRoleUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EW_Request\New_EW_ProcessRoleUser.aspx.designer.cs">
+      <DependentUpon>New_EW_ProcessRoleUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EW_Request\New_EW_Status.aspx.cs">
+      <DependentUpon>New_EW_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EW_Request\New_EW_Status.aspx.designer.cs">
+      <DependentUpon>New_EW_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EW_Request\New_EW_TechnicalDepartment.aspx.cs">
+      <DependentUpon>New_EW_TechnicalDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EW_Request\New_EW_TechnicalDepartment.aspx.designer.cs">
+      <DependentUpon>New_EW_TechnicalDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EW_Request\New_WorkType.aspx.cs">
+      <DependentUpon>New_WorkType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EW_Request\New_WorkType.aspx.designer.cs">
+      <DependentUpon>New_WorkType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HR_Request\HRRequisition.aspx.cs">
+      <DependentUpon>HRRequisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HR_Request\HRRequisition.aspx.designer.cs">
+      <DependentUpon>HRRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HR_Request\New_HR_ProcessRole.aspx.cs">
+      <DependentUpon>New_HR_ProcessRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HR_Request\New_HR_ProcessRole.aspx.designer.cs">
+      <DependentUpon>New_HR_ProcessRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HR_Request\New_HR_ProcessRoleUser.aspx.cs">
+      <DependentUpon>New_HR_ProcessRoleUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HR_Request\New_HR_ProcessRoleUser.aspx.designer.cs">
+      <DependentUpon>New_HR_ProcessRoleUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HR_Request\New_HR_Status.aspx.cs">
+      <DependentUpon>New_HR_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HR_Request\New_HR_Status.aspx.designer.cs">
+      <DependentUpon>New_HR_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IT_Request\Admin_DetailITRequest.aspx.cs">
+      <DependentUpon>Admin_DetailITRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IT_Request\Admin_DetailITRequest.aspx.designer.cs">
+      <DependentUpon>Admin_DetailITRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IT_Request\NewHomeApplication.aspx.cs">
+      <DependentUpon>NewHomeApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IT_Request\NewHomeApplication.aspx.designer.cs">
+      <DependentUpon>NewHomeApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_category.aspx.cs">
+      <DependentUpon>New_category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_category.aspx.designer.cs">
+      <DependentUpon>New_category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_Item.aspx.cs">
+      <DependentUpon>New_Item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_Item.aspx.designer.cs">
+      <DependentUpon>New_Item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_ProcessRole.aspx.cs">
+      <DependentUpon>New_ProcessRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_ProcessRole.aspx.designer.cs">
+      <DependentUpon>New_ProcessRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_ProcessRole_User.aspx.cs">
+      <DependentUpon>New_ProcessRole_User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_ProcessRole_User.aspx.designer.cs">
+      <DependentUpon>New_ProcessRole_User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_service.aspx.cs">
+      <DependentUpon>New_service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_service.aspx.designer.cs">
+      <DependentUpon>New_service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_Status.aspx.cs">
+      <DependentUpon>New_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IT_Request\New_Status.aspx.designer.cs">
+      <DependentUpon>New_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IT_Request\RequisitionitRequest.aspx.cs">
+      <DependentUpon>RequisitionitRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IT_Request\RequisitionitRequest.aspx.designer.cs">
+      <DependentUpon>RequisitionitRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\IT_Request\RequistionRequests.aspx.cs">
+      <DependentUpon>RequistionRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\IT_Request\RequistionRequests.aspx.designer.cs">
+      <DependentUpon>RequistionRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Parametre\CouleurMail.aspx.cs">
+      <DependentUpon>CouleurMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Parametre\CouleurMail.aspx.designer.cs">
+      <DependentUpon>CouleurMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Parametre\ParametreLink.aspx.cs">
+      <DependentUpon>ParametreLink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Parametre\ParametreLink.aspx.designer.cs">
+      <DependentUpon>ParametreLink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\NEW_TRANS_Place.aspx.cs">
+      <DependentUpon>NEW_TRANS_Place.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\NEW_TRANS_Place.aspx.designer.cs">
+      <DependentUpon>NEW_TRANS_Place.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\NEW_TRANS_ProcessRole.aspx.cs">
+      <DependentUpon>NEW_TRANS_ProcessRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\NEW_TRANS_ProcessRole.aspx.designer.cs">
+      <DependentUpon>NEW_TRANS_ProcessRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\New_TRANS_ProcessRoleUser.aspx.cs">
+      <DependentUpon>New_TRANS_ProcessRoleUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\New_TRANS_ProcessRoleUser.aspx.designer.cs">
+      <DependentUpon>New_TRANS_ProcessRoleUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\NEW_TRANS_Site.aspx.cs">
+      <DependentUpon>NEW_TRANS_Site.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\NEW_TRANS_Site.aspx.designer.cs">
+      <DependentUpon>NEW_TRANS_Site.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\NEW_TRANS_Status.aspx.cs">
+      <DependentUpon>NEW_TRANS_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\NEW_TRANS_Status.aspx.designer.cs">
+      <DependentUpon>NEW_TRANS_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\TRANSRequisition.aspx.cs">
+      <DependentUpon>TRANSRequisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRANS_Request\TRANSRequisition.aspx.designer.cs">
+      <DependentUpon>TRANSRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\New_TRN_ProcessRole.aspx.cs">
+      <DependentUpon>New_TRN_ProcessRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\New_TRN_ProcessRole.aspx.designer.cs">
+      <DependentUpon>New_TRN_ProcessRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\New_TRN_ProcessRoleUser.aspx.cs">
+      <DependentUpon>New_TRN_ProcessRoleUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\New_TRN_ProcessRoleUser.aspx.designer.cs">
+      <DependentUpon>New_TRN_ProcessRoleUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\New_TRN_Status.aspx.cs">
+      <DependentUpon>New_TRN_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\New_TRN_Status.aspx.designer.cs">
+      <DependentUpon>New_TRN_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\New_TRN_Type.aspx.cs">
+      <DependentUpon>New_TRN_Type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\New_TRN_Type.aspx.designer.cs">
+      <DependentUpon>New_TRN_Type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\TrainingIntegrate.aspx.cs">
+      <DependentUpon>TrainingIntegrate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\TrainingIntegrate.aspx.designer.cs">
+      <DependentUpon>TrainingIntegrate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\TrainingRequest.aspx.cs">
+      <DependentUpon>TrainingRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TRN_Request\TrainingRequest.aspx.designer.cs">
+      <DependentUpon>TrainingRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="all_NewRequest.aspx.cs">
+      <DependentUpon>all_NewRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="all_NewRequest.aspx.designer.cs">
+      <DependentUpon>all_NewRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\LocalizedText.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\LocalizedText.en-us.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedText.en-us.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\LocalizedText.fr-fr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizedText.fr-fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chattest.aspx.cs">
+      <DependentUpon>chattest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chattest.aspx.designer.cs">
+      <DependentUpon>chattest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default5.aspx.cs">
+      <DependentUpon>default5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default5.aspx.designer.cs">
+      <DependentUpon>default5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default2.aspx.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default2.aspx.designer.cs">
+      <DependentUpon>default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default_View_Approve.aspx.cs">
+      <DependentUpon>Default_View_Approve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default_View_Approve.aspx.designer.cs">
+      <DependentUpon>Default_View_Approve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default_View_MyRequests.aspx.cs">
+      <DependentUpon>Default_View_MyRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default_View_MyRequests.aspx.designer.cs">
+      <DependentUpon>Default_View_MyRequests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_BonSortie.aspx.cs">
+      <DependentUpon>Detail_BonSortie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail_BonSortie.aspx.designer.cs">
+      <DependentUpon>Detail_BonSortie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New_MCRequest_S.aspx.cs">
+      <DependentUpon>New_MCRequest_S.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_MCRequest_S.aspx.designer.cs">
+      <DependentUpon>New_MCRequest_S.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_DCRequest.aspx.cs">
+      <DependentUpon>Detail_DCRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail_DCRequest.aspx.designer.cs">
+      <DependentUpon>Detail_DCRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_ewoRequest.aspx.cs">
+      <DependentUpon>Detail_ewoRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail_ewoRequest.aspx.designer.cs">
+      <DependentUpon>Detail_ewoRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_ItProblem.aspx.cs">
+      <DependentUpon>Detail_ItProblem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail_ItProblem.aspx.designer.cs">
+      <DependentUpon>Detail_ItProblem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_itRequest.aspx.cs">
+      <DependentUpon>Detail_itRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail_itRequest.aspx.designer.cs">
+      <DependentUpon>Detail_itRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_radiorequest.aspx.cs">
+      <DependentUpon>Detail_radiorequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail_radiorequest.aspx.designer.cs">
+      <DependentUpon>Detail_radiorequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_RecruitmentRequest.aspx.cs">
+      <DependentUpon>Detail_RecruitmentRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail_RecruitmentRequest.aspx.designer.cs">
+      <DependentUpon>Detail_RecruitmentRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_BonEntree.aspx.cs">
+      <DependentUpon>Detail_BonEntree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail_BonEntree.aspx.designer.cs">
+      <DependentUpon>Detail_BonEntree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_trainingRequest.aspx.cs">
+      <DependentUpon>Detail_trainingRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail_trainingRequest.aspx.designer.cs">
+      <DependentUpon>Detail_trainingRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_TRANSRequest.aspx.cs">
+      <DependentUpon>Detail_TRANSRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detail_TRANSRequest.aspx.designer.cs">
+      <DependentUpon>Detail_TRANSRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="form\dskrequest.ascx.cs">
+      <DependentUpon>dskrequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="form\dskrequest.ascx.designer.cs">
+      <DependentUpon>dskrequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="form\ewoRequest.ascx.cs">
+      <DependentUpon>ewoRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="form\ewoRequest.ascx.designer.cs">
+      <DependentUpon>ewoRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="form\itrequest.ascx.cs">
+      <DependentUpon>itrequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="form\itrequest.ascx.designer.cs">
+      <DependentUpon>itrequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="form\RecrutmentRequest.ascx.cs">
+      <DependentUpon>RecrutmentRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="form\RecrutmentRequest.ascx.designer.cs">
+      <DependentUpon>RecrutmentRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="form\sysaid.ascx.cs">
+      <DependentUpon>sysaid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="form\sysaid.ascx.designer.cs">
+      <DependentUpon>sysaid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="form\trainingRequest.ascx.cs">
+      <DependentUpon>trainingRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="form\trainingRequest.ascx.designer.cs">
+      <DependentUpon>trainingRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Model_Page.Master.cs">
+      <DependentUpon>Model_Page.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Model_Page.Master.designer.cs">
+      <DependentUpon>Model_Page.Master</DependentUpon>
+    </Compile>
+    <Compile Include="My_allRequest.aspx.cs">
+      <DependentUpon>My_allRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My_allRequest.aspx.designer.cs">
+      <DependentUpon>My_allRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="My_RequestToAproval.aspx.cs">
+      <DependentUpon>My_RequestToAproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My_RequestToAproval.aspx.designer.cs">
+      <DependentUpon>My_RequestToAproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="My_RequestToAprovalHold.aspx.cs">
+      <DependentUpon>My_RequestToAprovalHold.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My_RequestToAprovalHold.aspx.designer.cs">
+      <DependentUpon>My_RequestToAprovalHold.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewRequest.Master.cs">
+      <DependentUpon>NewRequest.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewRequest.Master.designer.cs">
+      <DependentUpon>NewRequest.Master</DependentUpon>
+    </Compile>
+    <Compile Include="New_DCRequest.aspx.cs">
+      <DependentUpon>New_DCRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_DCRequest.aspx.designer.cs">
+      <DependentUpon>New_DCRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New_DSKRequest.aspx.cs">
+      <DependentUpon>New_DSKRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_DSKRequest.aspx.designer.cs">
+      <DependentUpon>New_DSKRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New_EWORequest.aspx.cs">
+      <DependentUpon>New_EWORequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_EWORequest.aspx.designer.cs">
+      <DependentUpon>New_EWORequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New_HrApproval.aspx.cs">
+      <DependentUpon>New_HrApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_HrApproval.aspx.designer.cs">
+      <DependentUpon>New_HrApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New_DeviceRegistration.aspx.cs">
+      <DependentUpon>New_DeviceRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_DeviceRegistration.aspx.designer.cs">
+      <DependentUpon>New_DeviceRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New_ITRequest.aspx.cs">
+      <DependentUpon>New_ITRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_ITRequest.aspx.designer.cs">
+      <DependentUpon>New_ITRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New_MCRequest.aspx.cs">
+      <DependentUpon>New_MCRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_MCRequest.aspx.designer.cs">
+      <DependentUpon>New_MCRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New_TrainingRequest.aspx.cs">
+      <DependentUpon>New_TrainingRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_TrainingRequest.aspx.designer.cs">
+      <DependentUpon>New_TrainingRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New_TRANSRequest.aspx.cs">
+      <DependentUpon>New_TRANSRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_TRANSRequest.aspx.designer.cs">
+      <DependentUpon>New_TRANSRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OutOfOffice.Master.cs">
+      <DependentUpon>OutOfOffice.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutOfOffice.Master.designer.cs">
+      <DependentUpon>OutOfOffice.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pageAccesError.aspx.cs">
+      <DependentUpon>pageAccesError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pageAccesError.aspx.designer.cs">
+      <DependentUpon>pageAccesError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pageError.aspx.cs">
+      <DependentUpon>pageError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pageError.aspx.designer.cs">
+      <DependentUpon>pageError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfilUsers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Rapports.Master.cs">
+      <DependentUpon>Rapports.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rapports.Master.designer.cs">
+      <DependentUpon>Rapports.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting.cs" />
+    <Compile Include="SchedulerFlight.aspx.cs">
+      <DependentUpon>SchedulerFlight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchedulerFlight.aspx.designer.cs">
+      <DependentUpon>SchedulerFlight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="New_ITProblem.aspx.cs">
+      <DependentUpon>New_ITProblem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_ITProblem.aspx.designer.cs">
+      <DependentUpon>New_ITProblem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingCalendar.aspx.cs">
+      <DependentUpon>TrainingCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingCalendar.aspx.designer.cs">
+      <DependentUpon>TrainingCalendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UC_DetailITRequest.ascx.cs">
+      <DependentUpon>UC_DetailITRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC_DetailITRequest.ascx.designer.cs">
+      <DependentUpon>UC_DetailITRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReports.aspx.cs">
+      <DependentUpon>ViewReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewReports.aspx.designer.cs">
+      <DependentUpon>ViewReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRequest.Master.cs">
+      <DependentUpon>ViewRequest.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewRequest.Master.designer.cs">
+      <DependentUpon>ViewRequest.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View_DCRequest.aspx.cs">
+      <DependentUpon>View_DCRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_DCRequest.aspx.designer.cs">
+      <DependentUpon>View_DCRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="_OutOfOffice.aspx.cs">
+      <DependentUpon>_OutOfOffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_OutOfOffice.aspx.designer.cs">
+      <DependentUpon>_OutOfOffice.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\font-awesome\4.5.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\font-awesome\4.5.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\font-awesome\4.5.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\font-awesome\4.5.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Site1.Master" />
+    <Content Include="NewRequest.Master" />
+    <Content Include="ViewRequest.Master" />
+    <Content Include="packages.config" />
+    <Content Include="OutOfOffice.Master" />
+    <Content Include="Model_Page.Master" />
+    <None Include="Properties\PublishProfiles\KccRequestDev.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\kccRequestTest.pubxml" />
+    <None Include="Properties\PublishProfiles\Test_145.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <None Include="Service References\ServiceReference1\ReportService2010.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KCCDBAccess\KCCDBAccess.csproj">
+      <Project>{f9b9810c-c3ce-4256-a8e6-c53e57bef249}</Project>
+      <Name>KCCDBAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\LocalizedText.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LocalizedText.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\LocalizedText.en-us.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LocalizedText.en-us.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\LocalizedText.fr-fr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LocalizedText.fr-fr.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10204</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10205/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

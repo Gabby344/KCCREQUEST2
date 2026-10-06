@@ -1,0 +1,48 @@
+﻿body {
+    font-family:Arial;
+}
+
+#divIt:hover {
+/*transform: rotateY(180deg);*/
+
+}
+.divppe {
+   /*transform-style: preserve-3d;
+  transition: all 1s ease-in-out;*/
+   height:210px;
+
+
+}
+#blocitrequest {
+    /*position: fixed;
+    margin-top:0px;
+    margin-left:0px;*/
+}
+.widget-body{
+    /*height:500px;
+    overflow-y:auto;
+    overflow-x:no-display;*/
+}
+#sidebar{
+/*position:fixed;
+  margin-top:0px;
+    margin-left:0px;*/
+
+/*position:fixed;
+        width: 100%;
+        top: 0; /* vaut mieux fixer les valeurs par défaut pour ne pas avoir de mauvaises surprises */*/
+
+}
+.media-object:hover{
+opacity : 0.5;
+
+
+}
+.divppe:hover {
+box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+#homepage {
+    /*background-image:url("~/assets/images/gallery/mine.jpg")*/
+}
+
+

@@ -1,0 +1,1809 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="application" xml:space="preserve">
+    <value>Software Development</value>
+  </data>
+  <data name="ArithmeticExceptionError" xml:space="preserve">
+    <value>Unable to save the request due to a typecast or conversion error, please check your entered information</value>
+  </data>
+  <data name="btnAddEstimation" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btnApproval" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="btnApprovalBudget" xml:space="preserve">
+    <value>Approve Budget</value>
+  </data>
+  <data name="btnBackToPrevious" xml:space="preserve">
+    <value>Back To Previous</value>
+  </data>
+  <data name="btnCallBack" xml:space="preserve">
+    <value>Call Back</value>
+  </data>
+  <data name="btnClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="btnCloseRequisition" xml:space="preserve">
+    <value>Close Requisition</value>
+  </data>
+  <data name="btnConfirmedSatisfaction" xml:space="preserve">
+    <value>Confirm the work is well done </value>
+  </data>
+  <data name="btndelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnForward" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="btnGoBack" xml:space="preserve">
+    <value>Go Back</value>
+  </data>
+  <data name="btnHold" xml:space="preserve">
+    <value>Hold</value>
+  </data>
+  <data name="btnHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="btnPrint" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="BtnReject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="btnRejectSatisfaction" xml:space="preserve">
+    <value>Confirm the work is poorly done </value>
+  </data>
+  <data name="btnReset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="BtnReturnToOrginator" xml:space="preserve">
+    <value>Return To Originator</value>
+  </data>
+  <data name="btnrRealocate" xml:space="preserve">
+    <value>Re-Allocate</value>
+  </data>
+  <data name="btnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnSaveEstimation" xml:space="preserve">
+    <value>Save Estimation</value>
+  </data>
+  <data name="btnSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="btnUpdate" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="btn_Add_Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btn_Approve_Budget" xml:space="preserve">
+    <value>Approve Budget</value>
+  </data>
+  <data name="btn_Approve_Estimation_Text" xml:space="preserve">
+    <value>Approve Estimation</value>
+  </data>
+  <data name="btn_Approve_Text" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="btn_Assign_Text" xml:space="preserve">
+    <value>Assign</value>
+  </data>
+  <data name="btn_Cancel_Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btn_Forward_Text" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="btn_Reject_Budget" xml:space="preserve">
+    <value>Reject Budget</value>
+  </data>
+  <data name="btn_Reject_Text" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="btn_Return_Text" xml:space="preserve">
+    <value>Return To Originator</value>
+  </data>
+  <data name="btn_Save_Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btn_Update_Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="budgedNon" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="budgedYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="cbFriday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="cbMonday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="cbSaturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="cbSunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="cbThursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="cbTuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="cbWednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="CompareDateStartAndEndEmptyError" xml:space="preserve">
+    <value>The start date must not be greater than the end date</value>
+  </data>
+  <data name="computer" xml:space="preserve">
+    <value>Computer</value>
+  </data>
+  <data name="connectivity" xml:space="preserve">
+    <value>Connectivity</value>
+  </data>
+  <data name="CountSelectContractorEmptyError" xml:space="preserve">
+    <value>Please select the contractors </value>
+  </data>
+  <data name="CountSelectEmployeeEmptyError" xml:space="preserve">
+    <value>Please select the employees</value>
+  </data>
+  <data name="DataOwnerEmptyError" xml:space="preserve">
+    <value>Please insert data owner</value>
+  </data>
+  <data name="ddlAppNameError" xml:space="preserve">
+    <value>Please select a valid Software</value>
+  </data>
+  <data name="ddlAppResponsibleError" xml:space="preserve">
+    <value>Please select a valid software responsible</value>
+  </data>
+  <data name="ddlAppSponsorError" xml:space="preserve">
+    <value>Please select a valid software sponsor</value>
+  </data>
+  <data name="Deselectall" xml:space="preserve">
+    <value>Deselect All</value>
+  </data>
+  <data name="detailEWtitle" xml:space="preserve">
+    <value>EW Request Detail</value>
+  </data>
+  <data name="detailITtitle" xml:space="preserve">
+    <value>IT Request Detail</value>
+  </data>
+  <data name="detailmsgIT" xml:space="preserve">
+    <value>Select item(s) to approve, reject or return to originator :</value>
+  </data>
+  <data name="detailRadioRequest" xml:space="preserve">
+    <value>Radio &amp; CCTV Request Detail</value>
+  </data>
+  <data name="detailTrainingRequest" xml:space="preserve">
+    <value>Training Request Detail</value>
+  </data>
+  <data name="dgvEmailAddress" xml:space="preserve">
+    <value>E-Mail Address</value>
+  </data>
+  <data name="dgvnamefileshare" xml:space="preserve">
+    <value>Name Of The File Shared</value>
+  </data>
+  <data name="dgvnDataOwner" xml:space="preserve">
+    <value>Data Owner</value>
+  </data>
+  <data name="dgvusername" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="divApplicationDescription" xml:space="preserve">
+    <value>Software Description:</value>
+  </data>
+  <data name="divApplicationName" xml:space="preserve">
+    <value>Software Name:</value>
+  </data>
+  <data name="divApplicationRaison" xml:space="preserve">
+    <value>Software Reason:</value>
+  </data>
+  <data name="divApplicationResponsible" xml:space="preserve">
+    <value>Software Responsible:</value>
+  </data>
+  <data name="divApplicationSponsor" xml:space="preserve">
+    <value>Software Sponsor:</value>
+  </data>
+  <data name="divApplicationTitle" xml:space="preserve">
+    <value>All fields are required</value>
+  </data>
+  <data name="divUserAccountDepartment" xml:space="preserve">
+    <value>Department :</value>
+  </data>
+  <data name="divUserAccountEmployee" xml:space="preserve">
+    <value>Employee ID</value>
+  </data>
+  <data name="divUserAccountJobTitle" xml:space="preserve">
+    <value>Job Title</value>
+  </data>
+  <data name="divUserAccountLocation" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="divUserAccountNewStart" xml:space="preserve">
+    <value>Employee Type</value>
+  </data>
+  <data name="divUserAccountPhoneNumber" xml:space="preserve">
+    <value>Phone Number:</value>
+  </data>
+  <data name="divUserAccountTitle" xml:space="preserve">
+    <value>New User Account</value>
+  </data>
+  <data name="divUserAccountVisitor" xml:space="preserve">
+    <value>Non KCC/ICON:</value>
+  </data>
+  <data name="divUserCompagnie" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="divUserttxtDurationAccount" xml:space="preserve">
+    <value>Account Expiry  date </value>
+  </data>
+  <data name="divUsertxtEmailAdress" xml:space="preserve">
+    <value>E-Mail Address  (Phone Number)</value>
+  </data>
+  <data name="dllRoleError" xml:space="preserve">
+    <value>Please select a role</value>
+  </data>
+  <data name="dllUsersError" xml:space="preserve">
+    <value>Please select a user</value>
+  </data>
+  <data name="ExceptionError" xml:space="preserve">
+    <value>The application has encountered a problem, please contact the administrator</value>
+  </data>
+  <data name="FileEmptyError" xml:space="preserve">
+    <value>Please insert attachments</value>
+  </data>
+  <data name="fileshare" xml:space="preserve">
+    <value>File Share</value>
+  </data>
+  <data name="FormatExceptionError" xml:space="preserve">
+    <value>Unable to save the request, there is a format error in your data, please check your entered information !</value>
+  </data>
+  <data name="GoSysaid" xml:space="preserve">
+    <value>Go To Sysaid</value>
+  </data>
+  <data name="headewrequest" xml:space="preserve">
+    <value>Please fill in the form and click save when ready :</value>
+  </data>
+  <data name="IndexOutOfRangeExceptionError" xml:space="preserve">
+    <value>Unable to save the request because the parameter index is out of range, please check your entered information</value>
+  </data>
+  <data name="Inverse" xml:space="preserve">
+    <value>Reverse</value>
+  </data>
+  <data name="lbbudgedYear" xml:space="preserve">
+    <value>Budgeted Year</value>
+  </data>
+  <data name="lbdgvComment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="lbdgvCreateBy" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="lbdgvCreateDate" xml:space="preserve">
+    <value>Created Date</value>
+  </data>
+  <data name="lbdgvCurrentUser" xml:space="preserve">
+    <value>Current User</value>
+  </data>
+  <data name="lbdgvFile" xml:space="preserve">
+    <value>Attachment(s)</value>
+  </data>
+  <data name="lbdgvJustification" xml:space="preserve">
+    <value>Business Justification</value>
+  </data>
+  <data name="lbdgvQuantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="lbdgvRole" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="lblActionSuccess" xml:space="preserve">
+    <value>Your operation was successfully completed</value>
+  </data>
+  <data name="lblActiveOutOfOffice" xml:space="preserve">
+    <value>Active Out Of Office</value>
+  </data>
+  <data name="lblAllDayEvent" xml:space="preserve">
+    <value>All Day Event</value>
+  </data>
+  <data name="lblAMTAge" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="lblAmtCost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="lblAMTCurrentUser" xml:space="preserve">
+    <value>Current User</value>
+  </data>
+  <data name="lblAMTDuration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="lblAMTPlanLabourHours" xml:space="preserve">
+    <value>Planned Labour Hours</value>
+  </data>
+  <data name="lblAMTPlannedDuration" xml:space="preserve">
+    <value>Planned Duration</value>
+  </data>
+  <data name="lblAMTStatusDescription" xml:space="preserve">
+    <value>Status Description</value>
+  </data>
+  <data name="lblAMTWorkorderID" xml:space="preserve">
+    <value>Work Order ID</value>
+  </data>
+  <data name="lblAMTWorkOrderNumber" xml:space="preserve">
+    <value>Work Order Number</value>
+  </data>
+  <data name="lblAssignTo" xml:space="preserve">
+    <value>Assign To</value>
+  </data>
+  <data name="lblAutoReplyMessage" xml:space="preserve">
+    <value>Automatic Reply</value>
+  </data>
+  <data name="lblBeneficiary" xml:space="preserve">
+    <value>Requested For</value>
+  </data>
+  <data name="lblBeneficiaryJobTitle" xml:space="preserve">
+    <value>Requested For's  Job Title</value>
+  </data>
+  <data name="lblBudgetedCheck" xml:space="preserve">
+    <value>Budgeted</value>
+  </data>
+  <data name="lblCampLocation" xml:space="preserve">
+    <value>Camp Location</value>
+  </data>
+  <data name="lblCategory" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="lblCategoryImpact" xml:space="preserve">
+    <value>Category (what is the impact of this training ?) :</value>
+  </data>
+  <data name="lblComment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="lblCommentEmptyError" xml:space="preserve">
+    <value>Please insert a comment</value>
+  </data>
+  <data name="lblContactNumber" xml:space="preserve">
+    <value>Contact Number</value>
+  </data>
+  <data name="lblContractor" xml:space="preserve">
+    <value>Contractor</value>
+  </data>
+  <data name="lblCostCenter" xml:space="preserve">
+    <value>Cost Center</value>
+  </data>
+  <data name="lblCourse" xml:space="preserve">
+    <value>Course</value>
+  </data>
+  <data name="lblCourseDescription" xml:space="preserve">
+    <value>Course Description</value>
+  </data>
+  <data name="lblDateFrom" xml:space="preserve">
+    <value>Date From</value>
+  </data>
+  <data name="lblDateTo" xml:space="preserve">
+    <value>Date To</value>
+  </data>
+  <data name="lblDay" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="lblDepartment" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="lblDescriptionError" xml:space="preserve">
+    <value>If the problem persists, please contact the help desk</value>
+  </data>
+  <data name="lblDesigned" xml:space="preserve">
+    <value>Designed (What is the existing design)</value>
+  </data>
+  <data name="lblDetailitproblemRequest" xml:space="preserve">
+    <value>Detail Report an IT Problem</value>
+  </data>
+  <data name="lblDisableOutofOffice" xml:space="preserve">
+    <value>Disable this delegation</value>
+  </data>
+  <data name="lblDoyouHaveaworkaround" xml:space="preserve">
+    <value>Do you have a work around?</value>
+  </data>
+  <data name="lblDuration" xml:space="preserve">
+    <value>Duration Month</value>
+  </data>
+  <data name="lblElectroniqueWorkRequest" xml:space="preserve">
+    <value>Engineering Work Request </value>
+  </data>
+  <data name="lblEmplacement" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="lblEmployeeRequisition" xml:space="preserve">
+    <value>Employee Requisition</value>
+  </data>
+  <data name="lblEmploymentEntity" xml:space="preserve">
+    <value>Employment Entity</value>
+  </data>
+  <data name="lblEndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="lblEnvironment" xml:space="preserve">
+    <value>Environment </value>
+  </data>
+  <data name="lblEquipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="lblFile" xml:space="preserve">
+    <value>Attachment(s)</value>
+  </data>
+  <data name="lblFleet" xml:space="preserve">
+    <value>Fleet</value>
+  </data>
+  <data name="lblForUser" xml:space="preserve">
+    <value>For User</value>
+  </data>
+  <data name="lblfrom" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="lblFunction" xml:space="preserve">
+    <value>Function</value>
+  </data>
+  <data name="lblInactiveOutOfOffice" xml:space="preserve">
+    <value>Inactive Out Of Office</value>
+  </data>
+  <data name="lblIncidentSysaid" xml:space="preserve">
+    <value>The Sysaid Incident Number</value>
+  </data>
+  <data name="lblIncidentSysaid2" xml:space="preserve">
+    <value>Has just been submitted to IT, you will be contacted within 6 hours</value>
+  </data>
+  <data name="lblInsertComment" xml:space="preserve">
+    <value>Please insert your comment</value>
+  </data>
+  <data name="lblIsReplacement" xml:space="preserve">
+    <value>Is it a replacement ?</value>
+  </data>
+  <data name="lblITProblem" xml:space="preserve">
+    <value>Report an IT Problem</value>
+  </data>
+  <data name="lblitproblemRequest" xml:space="preserve">
+    <value>Report an IT Problem</value>
+  </data>
+  <data name="lblITRequest" xml:space="preserve">
+    <value>IT Request</value>
+  </data>
+  <data name="lblJobDescriptionTitle" xml:space="preserve">
+    <value>Job Description Not Exists?</value>
+  </data>
+  <data name="lblJobGrade" xml:space="preserve">
+    <value>Job Grade</value>
+  </data>
+  <data name="lblJobTitle" xml:space="preserve">
+    <value>Job Function</value>
+  </data>
+  <data name="lblJustificationWhy" xml:space="preserve">
+    <value>Business Justification</value>
+  </data>
+  <data name="lblKCCEmployee" xml:space="preserve">
+    <value>KCC Employee</value>
+  </data>
+  <data name="lblLoading" xml:space="preserve">
+    <value>Loading... Please wait.</value>
+  </data>
+  <data name="lblMainResponsibility" xml:space="preserve">
+    <value>Main Responsibility</value>
+  </data>
+  <data name="lblMessageAccessDenie" xml:space="preserve">
+    <value>Please the following points may be the root cause :</value>
+  </data>
+  <data name="lblMinimumQualification" xml:space="preserve">
+    <value>Minimum Qualifications</value>
+  </data>
+  <data name="lblMsgDetailIT" xml:space="preserve">
+    <value>Select item(s) requested from the list below : </value>
+  </data>
+  <data name="lblMsgHeadIT" xml:space="preserve">
+    <value>The items on this request are to be allocated to : </value>
+  </data>
+  <data name="lblmsgtraining" xml:space="preserve">
+    <value>Select Employee(s) requested from the list below :</value>
+  </data>
+  <data name="lblMyHomePage" xml:space="preserve">
+    <value>My Home Page :</value>
+  </data>
+  <data name="lblNewewRequest" xml:space="preserve">
+    <value>New Engineering Work Request</value>
+  </data>
+  <data name="lblNewHrRequest" xml:space="preserve">
+    <value>New Recruitment Request </value>
+  </data>
+  <data name="lblNewItRequest" xml:space="preserve">
+    <value>New IT Request </value>
+  </data>
+  <data name="lblNewradioRequest" xml:space="preserve">
+    <value>New Radio &amp; CCTV  Request</value>
+  </data>
+  <data name="lblNewRowError" xml:space="preserve">
+    <value>Impossible to add this row - Please make sure that all fields have a value</value>
+  </data>
+  <data name="lblNewtrainingRequest" xml:space="preserve">
+    <value>New Training Request</value>
+  </data>
+  <data name="lblNoItemSelectedError" xml:space="preserve">
+    <value>No items selected - Please select at least one item</value>
+  </data>
+  <data name="lblNumberOfRequest" xml:space="preserve">
+    <value>Number of Requests</value>
+  </data>
+  <data name="lblNumberPosition" xml:space="preserve">
+    <value>Number of Positions</value>
+  </data>
+  <data name="lblNumberSysaidSelectedError" xml:space="preserve">
+    <value>This request has not yet integrated sysaid</value>
+  </data>
+  <data name="lblotherRequirement" xml:space="preserve">
+    <value>Other Requirements</value>
+  </data>
+  <data name="lblOthersApplication" xml:space="preserve">
+    <value>Other Applications</value>
+  </data>
+  <data name="lblOutOfOffice" xml:space="preserve">
+    <value>Delegation</value>
+  </data>
+  <data name="lblOutOfOfficetxt" xml:space="preserve">
+    <value>New Delegation</value>
+  </data>
+  <data name="lblpanelAdmin" xml:space="preserve">
+    <value>Admin Panel </value>
+  </data>
+  <data name="lblPlannedStartDate" xml:space="preserve">
+    <value>Expected Delivery Date</value>
+  </data>
+  <data name="lblPositionLevel" xml:space="preserve">
+    <value>Position Level</value>
+  </data>
+  <data name="lblPriority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="lblProcess" xml:space="preserve">
+    <value>Process:</value>
+  </data>
+  <data name="lblQuotationFile" xml:space="preserve">
+    <value>(Quotation) Attachment(s)</value>
+  </data>
+  <data name="lblRadioRequest" xml:space="preserve">
+    <value>Radio &amp; CCTV Request</value>
+  </data>
+  <data name="lblRecruitmentRequest" xml:space="preserve">
+    <value>Recruitment Request </value>
+  </data>
+  <data name="lblRecurrence" xml:space="preserve">
+    <value>Occurrence</value>
+  </data>
+  <data name="lblRemarques" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="lblReplacementEmployee" xml:space="preserve">
+    <value>Replacement Employee Name</value>
+  </data>
+  <data name="lblReplacementJobTitle" xml:space="preserve">
+    <value>Replacement Job Function</value>
+  </data>
+  <data name="lblReplacementPostNumber" xml:space="preserve">
+    <value>Replacement Post Number</value>
+  </data>
+  <data name="lblReplacementReason" xml:space="preserve">
+    <value>Replacement Reason</value>
+  </data>
+  <data name="lblReplyMessageError" xml:space="preserve">
+    <value>Please insert automatic reply</value>
+  </data>
+  <data name="lblReportTo" xml:space="preserve">
+    <value>Report To</value>
+  </data>
+  <data name="lblRequestDescription" xml:space="preserve">
+    <value>Request Description</value>
+  </data>
+  <data name="lblRequestMethode" xml:space="preserve">
+    <value>Recruitment Type</value>
+  </data>
+  <data name="lblRequestor" xml:space="preserve">
+    <value>Requested By</value>
+  </data>
+  <data name="lblRole" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="lblSafety" xml:space="preserve">
+    <value>Safety</value>
+  </data>
+  <data name="lblScopeOfWork" xml:space="preserve">
+    <value>Scope Of Work?</value>
+  </data>
+  <data name="lblsdepartment" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="lblSetOutOfOffice" xml:space="preserve">
+    <value>Set Automatic Reply in Outlook</value>
+  </data>
+  <data name="lblStartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="lblStatut" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="lblSuccess" xml:space="preserve">
+    <value>Request Created</value>
+  </data>
+  <data name="lblTechnicalDepartment" xml:space="preserve">
+    <value>Technical Department</value>
+  </data>
+  <data name="lblTechnicalManager" xml:space="preserve">
+    <value>Technical Manager</value>
+  </data>
+  <data name="lblTechnicalPlanner" xml:space="preserve">
+    <value>Technical Planner</value>
+  </data>
+  <data name="lblTechnicalPlannerName" xml:space="preserve">
+    <value>Technical Planner Name</value>
+  </data>
+  <data name="lblTimeRange" xml:space="preserve">
+    <value>Time From</value>
+  </data>
+  <data name="lblTitle" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="lbltitleDetailRecruitment" xml:space="preserve">
+    <value>Detail Recruitment Request </value>
+  </data>
+  <data name="lblTitleError" xml:space="preserve">
+    <value>We encountered a problem. Please try again.</value>
+  </data>
+  <data name="lbltitrapporthome" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="lbltitreAccessDenie" xml:space="preserve">
+    <value>ACCESS DENIED</value>
+  </data>
+  <data name="lbltitrehome" xml:space="preserve">
+    <value>Welcome to KCC Request for Service</value>
+  </data>
+  <data name="lblTmTp" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="lblTo" xml:space="preserve">
+    <value>Time To</value>
+  </data>
+  <data name="lblTrainingLocation" xml:space="preserve">
+    <value>Training Location</value>
+  </data>
+  <data name="lblTrainingProgramme" xml:space="preserve">
+    <value>Training Details</value>
+  </data>
+  <data name="lblTrainingRequest" xml:space="preserve">
+    <value>Training Request</value>
+  </data>
+  <data name="lblTrainingType" xml:space="preserve">
+    <value>Training Type</value>
+  </data>
+  <data name="lblTrainingVenue" xml:space="preserve">
+    <value>Venue</value>
+  </data>
+  <data name="lblTRPeriodicity" xml:space="preserve">
+    <value>Periodicity</value>
+  </data>
+  <data name="lblTypeContratUndertermined" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="lbltypeEmployee" xml:space="preserve">
+    <value>Employee Type</value>
+  </data>
+  <data name="lblTypeofContract" xml:space="preserve">
+    <value>Type Of Contract</value>
+  </data>
+  <data name="lblTypeSoftware" xml:space="preserve">
+    <value>Type Of Software</value>
+  </data>
+  <data name="lblUnitCost" xml:space="preserve">
+    <value>Unit Cost</value>
+  </data>
+  <data name="lblUnitMesure" xml:space="preserve">
+    <value>Unit Measure</value>
+  </data>
+  <data name="lblUrgence" xml:space="preserve">
+    <value>Urgency</value>
+  </data>
+  <data name="lblUrgency" xml:space="preserve">
+    <value>Urgency</value>
+  </data>
+  <data name="lblUrgencyComment" xml:space="preserve">
+    <value>Urgency Comment</value>
+  </data>
+  <data name="lblUrgencyCommentError" xml:space="preserve">
+    <value>Please comment the urgency you selected</value>
+  </data>
+  <data name="lblUser" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="lblUsers" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="lblView" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="lblWhoIsAffected" xml:space="preserve">
+    <value>Who is affected?</value>
+  </data>
+  <data name="lblwithoutDepartmentCode_SAGE" xml:space="preserve">
+    <value>No Department in Sage :  Please Contact HR</value>
+  </data>
+  <data name="lblwithoutEmployeeAD" xml:space="preserve">
+    <value>No Employee ID in Active Directory : Please Contact the helpdesk</value>
+  </data>
+  <data name="lblwithoutReportTo" xml:space="preserve">
+    <value>No Report To in Sage :  Please Contact HR</value>
+  </data>
+  <data name="LstAffectedEmptyError" xml:space="preserve">
+    <value>Please select  Who is affected?</value>
+  </data>
+  <data name="lstAssignEmptyError" xml:space="preserve">
+    <value>Please select a valid Employee </value>
+  </data>
+  <data name="LstCampLocationEmptyError" xml:space="preserve">
+    <value>Please select Camp Location</value>
+  </data>
+  <data name="lstCategoryEmptyError" xml:space="preserve">
+    <value>Please select a valid Category</value>
+  </data>
+  <data name="LstCostCenterEmptyError" xml:space="preserve">
+    <value>Cost Center cannot be empty !</value>
+  </data>
+  <data name="LstCourseDescriptionEmptyError" xml:space="preserve">
+    <value>Please select a Course Description</value>
+  </data>
+  <data name="lstDepartmentEmptyError" xml:space="preserve">
+    <value>Please select a valid Department</value>
+  </data>
+  <data name="lstEmployee" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="LstEmployeeTypeEmptyError" xml:space="preserve">
+    <value>Please select a Employee Type</value>
+  </data>
+  <data name="LstEmploymentEntityEmptyError" xml:space="preserve">
+    <value>Please select a Employment Entity</value>
+  </data>
+  <data name="lstEquipmentEmptyError" xml:space="preserve">
+    <value>Please select a valid Equipment</value>
+  </data>
+  <data name="lstFleetEmptyError" xml:space="preserve">
+    <value>Please select a valid Fleet </value>
+  </data>
+  <data name="LstImpactEmptyError" xml:space="preserve">
+    <value>Please select impact</value>
+  </data>
+  <data name="LstJobGradeEmptyError" xml:space="preserve">
+    <value>Job Grade cannot be empty !</value>
+  </data>
+  <data name="LstLocationEmptyError" xml:space="preserve">
+    <value>Please insert location</value>
+  </data>
+  <data name="lstModuleEmptyError" xml:space="preserve">
+    <value>Please select at least one Software development</value>
+  </data>
+  <data name="lstPriorityEmptyError" xml:space="preserve">
+    <value>Please select a valid Priority</value>
+  </data>
+  <data name="LstReportToEmptyError" xml:space="preserve">
+    <value>Report to cannot be empty</value>
+  </data>
+  <data name="LstRequestMethodeEmptyError" xml:space="preserve">
+    <value>Please select a Request Type</value>
+  </data>
+  <data name="lstRequestorEmptyError" xml:space="preserve">
+    <value>Please select a valid Requestor</value>
+  </data>
+  <data name="lstRoleEmptyError" xml:space="preserve">
+    <value>Please select at least one role</value>
+  </data>
+  <data name="lstServiceSecEmptyError" xml:space="preserve">
+    <value>Please select service</value>
+  </data>
+  <data name="lstSiteEmptyError" xml:space="preserve">
+    <value>Please select a valid Site</value>
+  </data>
+  <data name="LstTrainingLocationEmptyError" xml:space="preserve">
+    <value>Please select a Training Location</value>
+  </data>
+  <data name="LstTrainingTypeEmptyError" xml:space="preserve">
+    <value>Please select a Training Type</value>
+  </data>
+  <data name="LstTypeOfContratEmptyError" xml:space="preserve">
+    <value>Position Level cannot be empty !</value>
+  </data>
+  <data name="LstUrgenceEmptyError" xml:space="preserve">
+    <value>Please select urgency</value>
+  </data>
+  <data name="LstWorkAroundEmptyError" xml:space="preserve">
+    <value>Please select Do you have a work around</value>
+  </data>
+  <data name="menuHelp" xml:space="preserve">
+    <value>Help?</value>
+  </data>
+  <data name="menuHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="menuNewRequest" xml:space="preserve">
+    <value>New Request</value>
+  </data>
+  <data name="menuReports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="menuViewRequest" xml:space="preserve">
+    <value>View Requests</value>
+  </data>
+  <data name="msgErreur" xml:space="preserve">
+    <value>An error has occurred, please try again, or contact the administrator</value>
+  </data>
+  <data name="networks" xml:space="preserve">
+    <value>Network</value>
+  </data>
+  <data name="NullReferenceExceptionError" xml:space="preserve">
+    <value>Unable to save the request, a null reference error occurs, please check your entered information</value>
+  </data>
+  <data name="popUpInvalidInput" xml:space="preserve">
+    <value>Error - Invalid Input(s)</value>
+  </data>
+  <data name="rdVisitorNewStartEmptyError" xml:space="preserve">
+    <value>Please select Visitor or New Start</value>
+  </data>
+  <data name="requestorName" xml:space="preserve">
+    <value>Requestor Name</value>
+  </data>
+  <data name="selectall" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="selectBudgetdNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="selectBudgetdYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="selectdllAffected" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllAMTEFleet" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllAMTEquipment" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllAMTSite" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllApplicationName" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllApplicationResponsable" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllApplicationSponsor" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllCampLocation" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllcategorie" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllContractor" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllcostCenter" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllDepartement" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllduration" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllemployeeType" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllEmploymentEntity" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllJobGrade" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllpriority" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllRequestMethode" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllRequestor" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllrole" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllService" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllTechnicalDepartment" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllTechnicalManager" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllTechnicalPlanner" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllTrainingCours" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllTrainingLocation" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllTypeOfContract" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdlltypeTraining" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdlluser" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectLstReportTo" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectNonStandardSoftware" xml:space="preserve">
+    <value>Non-standard software</value>
+  </data>
+  <data name="selectStandardSoftware" xml:space="preserve">
+    <value>Standard Software</value>
+  </data>
+  <data name="selecttxtApplicationDescription" xml:space="preserve">
+    <value>Chooose One</value>
+  </data>
+  <data name="selecttxtCommentConnectivity" xml:space="preserve">
+    <value>Please note duration of stay</value>
+  </data>
+  <data name="selecttxtCommentTelephone" xml:space="preserve">
+    <value>Please Attach incident report</value>
+  </data>
+  <data name="selecttxtNewUserConnectivity" xml:space="preserve">
+    <value>New User Account</value>
+  </data>
+  <data name="selectTypeSoftware" xml:space="preserve">
+    <value>Choose one</value>
+  </data>
+  <data name="smenuAllRequestAppr" xml:space="preserve">
+    <value>    All Requests To Approve</value>
+  </data>
+  <data name="smenuMyallRequest" xml:space="preserve">
+    <value>    All My Requests </value>
+  </data>
+  <data name="software" xml:space="preserve">
+    <value>Software</value>
+  </data>
+  <data name="SystemExceptionError" xml:space="preserve">
+    <value>Unable to save the request, a system error occurs, please try again!</value>
+  </data>
+  <data name="tbItemsEmptyError" xml:space="preserve">
+    <value>No items selected or invalid quantity</value>
+  </data>
+  <data name="tbItemsEmptyError1" xml:space="preserve">
+    <value>No items selected</value>
+  </data>
+  <data name="telephone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="TimeoutExceptionError" xml:space="preserve">
+    <value>The program has encountered a time-out problem, please try again later</value>
+  </data>
+  <data name="txtAppDescriptionError" xml:space="preserve">
+    <value>Please insert Software Description</value>
+  </data>
+  <data name="txtAppReasonError" xml:space="preserve">
+    <value>Please insert Software reason</value>
+  </data>
+  <data name="txtBeneficiaryEmptyError" xml:space="preserve">
+    <value>Please insert the Requested For</value>
+  </data>
+  <data name="txtBeneficiaryJobTitleEmptyError" xml:space="preserve">
+    <value>Please insert the Beneficiary Job Title</value>
+  </data>
+  <data name="txtBudgetYearEmptyError" xml:space="preserve">
+    <value>Please insert the Budgeted Year</value>
+  </data>
+  <data name="txtCommentApplicationDescription" xml:space="preserve">
+    <value>Software Description :</value>
+  </data>
+  <data name="txtCommentApplicationName" xml:space="preserve">
+    <value>Software Name:</value>
+  </data>
+  <data name="txtCommentApplicationReason" xml:space="preserve">
+    <value>Software Reason:</value>
+  </data>
+  <data name="txtCommentApplicationResponsible" xml:space="preserve">
+    <value>Software Responsible:</value>
+  </data>
+  <data name="txtCommentApplicationSponsor" xml:space="preserve">
+    <value>Software Sponsor:</value>
+  </data>
+  <data name="txtCommentCompany" xml:space="preserve">
+    <value>Company:</value>
+  </data>
+  <data name="txtCommentDataOwner" xml:space="preserve">
+    <value>Data Owner:</value>
+  </data>
+  <data name="txtCommentdepartment" xml:space="preserve">
+    <value>Department:</value>
+  </data>
+  <data name="txtCommentDurationofAccount" xml:space="preserve">
+    <value>Duration of Account:</value>
+  </data>
+  <data name="txtCommentEmailAdresse" xml:space="preserve">
+    <value>E-Mail Adress:</value>
+  </data>
+  <data name="txtCommentEmployeeNumber" xml:space="preserve">
+    <value>Employee N°: </value>
+  </data>
+  <data name="txtCommentJobTitle" xml:space="preserve">
+    <value>Job Title:</value>
+  </data>
+  <data name="txtCommentLocation" xml:space="preserve">
+    <value>Location:</value>
+  </data>
+  <data name="txtCommentNameOfTheFileShare" xml:space="preserve">
+    <value>Name of the file share:</value>
+  </data>
+  <data name="txtCommentNewUserAccountType" xml:space="preserve">
+    <value>New User Account Type:</value>
+  </data>
+  <data name="txtCommentPlannerEmptyError" xml:space="preserve">
+    <value>Please insert a comment </value>
+  </data>
+  <data name="txtCommentStartDate" xml:space="preserve">
+    <value>Start Date:</value>
+  </data>
+  <data name="txtCommentUserName" xml:space="preserve">
+    <value>User Name:</value>
+  </data>
+  <data name="txtCompanyEmptyError" xml:space="preserve">
+    <value>Please insert the company for new KCC/ICON</value>
+  </data>
+  <data name="txtContactNumberEmptyError" xml:space="preserve">
+    <value>Please insert contact number</value>
+  </data>
+  <data name="txtCourseEmptyError" xml:space="preserve">
+    <value>Course cannot be empty</value>
+  </data>
+  <data name="txtDateFromEmptyError" xml:space="preserve">
+    <value>Please select a valid Start Date</value>
+  </data>
+  <data name="txtDateToEmptyError" xml:space="preserve">
+    <value>Please select a valid End Date</value>
+  </data>
+  <data name="txtDesignedExistingEmptyError" xml:space="preserve">
+    <value>Please Insert the Designed(What is there currently/Existing)</value>
+  </data>
+  <data name="txtDurationAccountEmptyError" xml:space="preserve">
+    <value>Please Insert Duration Account for new Visitor</value>
+  </data>
+  <data name="txtDurationEmptyError" xml:space="preserve">
+    <value>Duration cannot be empty !</value>
+  </data>
+  <data name="txtEmailAdressEmptyError" xml:space="preserve">
+    <value>Please Insert E-Mail Adress</value>
+  </data>
+  <data name="txtEmployeeNumber" xml:space="preserve">
+    <value>Employee Number</value>
+  </data>
+  <data name="txtEmployeeNumberError" xml:space="preserve">
+    <value>Please insert a valid Employee Number</value>
+  </data>
+  <data name="txtEndDateCommentEmptyError" xml:space="preserve">
+    <value>Please insert a End Date</value>
+  </data>
+  <data name="txtFileShareNameEmptyError" xml:space="preserve">
+    <value>Please Insert Name of the File Share</value>
+  </data>
+  <data name="txtInvalidInput" xml:space="preserve">
+    <value>Invalid input</value>
+  </data>
+  <data name="txtInvalidInput1" xml:space="preserve">
+    <value>Invalid input</value>
+  </data>
+  <data name="txtIsReplacementEmptyError" xml:space="preserve">
+    <value>Remplacement cannot be empty !</value>
+  </data>
+  <data name="txtJobGradeEmptyError" xml:space="preserve">
+    <value>Please select a Job Grade</value>
+  </data>
+  <data name="txtJobTitleEmptyError" xml:space="preserve">
+    <value>Job Function cannot be empty !</value>
+  </data>
+  <data name="txtJustificationWhyEmptyError" xml:space="preserve">
+    <value>Please insert the Business Justification</value>
+  </data>
+  <data name="txtLocationEmptyError" xml:space="preserve">
+    <value>Please insert Location</value>
+  </data>
+  <data name="txtMinimumQualificationEmptyError" xml:space="preserve">
+    <value>Minimum Qualification cannot be empty !</value>
+  </data>
+  <data name="txtMotivationEnvironmentEmptyError" xml:space="preserve">
+    <value>Please insert environment motivation </value>
+  </data>
+  <data name="txtMotivationProductionEmptyError" xml:space="preserve">
+    <value>Please insert production motivation </value>
+  </data>
+  <data name="txtMotivationSafetyEmptyError" xml:space="preserve">
+    <value>Please insert motivation safety</value>
+  </data>
+  <data name="txtNumberOfPositionEmptyError" xml:space="preserve">
+    <value>Number of Position cannot be empty !</value>
+  </data>
+  <data name="txtOhterRequirementsEmptyError" xml:space="preserve">
+    <value>Other Requirements cannot be empty !</value>
+  </data>
+  <data name="txtPlannedStartDateEmptyError" xml:space="preserve">
+    <value>Please select a valid Expected Delivery Date</value>
+  </data>
+  <data name="txtPlannedStartDateLess" xml:space="preserve">
+    <value>Expected Delivery Date cannot be empty can not be less than today's date  - Please select a valid Planned Delivery Date</value>
+  </data>
+  <data name="txtPrincipalTask" xml:space="preserve">
+    <value>Principal Task cannot be empty !</value>
+  </data>
+  <data name="txtReplacementJobTitleEmptyError" xml:space="preserve">
+    <value>Replacement Job Title cannot be empty !</value>
+  </data>
+  <data name="txtReplacementReasonEmptyError" xml:space="preserve">
+    <value>Replacement Reason cannot be empty !</value>
+  </data>
+  <data name="txtRequestDescriptionEmptyError" xml:space="preserve">
+    <value>Please insert the Description of your request</value>
+  </data>
+  <data name="txtScopeOfWorkEmptyError" xml:space="preserve">
+    <value>Please insert the Scope of work of your request</value>
+  </data>
+  <data name="txtStartDateCommentEmptyError" xml:space="preserve">
+    <value>Please insert a Start Date</value>
+  </data>
+  <data name="txtStartDateEmptyError" xml:space="preserve">
+    <value>Please insert a Start Date</value>
+  </data>
+  <data name="txtStartDateError" xml:space="preserve">
+    <value>Start Date cannot be less than today's date or day behind - Please select a valid Start Date</value>
+  </data>
+  <data name="txtSubjectEmptyError" xml:space="preserve">
+    <value>Please select subject</value>
+  </data>
+  <data name="txtTimeEndEmpty" xml:space="preserve">
+    <value>Please select a valid End Time</value>
+  </data>
+  <data name="txtTimeStartEmpty" xml:space="preserve">
+    <value>Please select a valid Start Time</value>
+  </data>
+  <data name="txtTrainingVenueEmptyError" xml:space="preserve">
+    <value>Please insert a Training Venue</value>
+  </data>
+  <data name="txtTrnDayEmptyError" xml:space="preserve">
+    <value>Please select at least one day</value>
+  </data>
+  <data name="txtUsernameFileShareEmptyError" xml:space="preserve">
+    <value>Please insert User Name</value>
+  </data>
+  <data name="ZoneDetail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="zoneDetailAMT" xml:space="preserve">
+    <value>AMT Detail </value>
+  </data>
+  <data name="zoneHistory" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="DgvEstimationEmptyError" xml:space="preserve">
+    <value>Estimation cannot be empty</value>
+  </data>
+  <data name="btnDisable" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="dgvActiveOutOfficeEmptyError" xml:space="preserve">
+    <value>There are no items to deactivate</value>
+  </data>
+  <data name="NbreSelectItemEmptyError" xml:space="preserve">
+    <value>Please select the items to deactivate</value>
+  </data>
+  <data name="lblTask" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="lblWorkType" xml:space="preserve">
+    <value>Work Type</value>
+  </data>
+  <data name="lstTaskEmptyError" xml:space="preserve">
+    <value>Please select a valid task</value>
+  </data>
+  <data name="lstWorkTypeEmptyError" xml:space="preserve">
+    <value>Please select a valid work type</value>
+  </data>
+  <data name="selectdllTask" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="selectdllWorkType" xml:space="preserve">
+    <value>Choose One</value>
+  </data>
+  <data name="txtPrincipalTaskEmptyError" xml:space="preserve">
+    <value>Main Responsibility cannot be empty</value>
+  </data>
+  <data name="lblOPS" xml:space="preserve">
+    <value>Is OPS ?</value>
+  </data>
+  <data name="infobullebtnDetail" xml:space="preserve">
+    <value>View details</value>
+  </data>
+  <data name="infobulleDSKRequest" xml:space="preserve">
+    <value>Radio &amp; CCTV demand or maintenance </value>
+  </data>
+  <data name="infobulleHrRequest" xml:space="preserve">
+    <value>New recruitment or replacement</value>
+  </data>
+  <data name="infobulleItProblem" xml:space="preserve">
+    <value>Any issue with IT equipment</value>
+  </data>
+  <data name="infobulleItRequest" xml:space="preserve">
+    <value>Equipment or Service request to IT</value>
+  </data>
+  <data name="infobulleTrainingRequest" xml:space="preserve">
+    <value>Request of training</value>
+  </data>
+  <data name="infobulleWorkRequest" xml:space="preserve">
+    <value>Work Order </value>
+  </data>
+  <data name="smenuAllRequestApprHold" xml:space="preserve">
+    <value>Hold Request to approve </value>
+  </data>
+  <data name="lblShareNeedAccess" xml:space="preserve">
+    <value>Put the folder name you need to access</value>
+  </data>
+  <data name="FileAttachesEmptyError" xml:space="preserve">
+    <value>Please insert the attachment file</value>
+  </data>
+  <data name="DivtextVisitor" xml:space="preserve">
+    <value>Visitor Internet Access</value>
+  </data>
+  <data name="selecttxtInternetVisitorConnectivity" xml:space="preserve">
+    <value>Please note duration of stay</value>
+  </data>
+  <data name="divUserttxtFullName" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="txtCountEmployeeError" xml:space="preserve">
+    <value>The number of employees selected, must not be greater than the number of places available</value>
+  </data>
+  <data name="lblArrivalPlace" xml:space="preserve">
+    <value>Arrival Place</value>
+  </data>
+  <data name="lblDepartureDateTime" xml:space="preserve">
+    <value>Departue Date &amp; Time</value>
+  </data>
+  <data name="lblDeparturePlace" xml:space="preserve">
+    <value>Departure Place</value>
+  </data>
+  <data name="lblPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="txtNumberPlaceEmptyError" xml:space="preserve">
+    <value> Please the number of passenger can not be less than 1</value>
+  </data>
+  <data name="lblContractorCompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="lblContractorEmployeeNumber" xml:space="preserve">
+    <value>Employee number</value>
+  </data>
+  <data name="lblContractorJobTitle" xml:space="preserve">
+    <value>Job Title</value>
+  </data>
+  <data name="lblContractorLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lblContractorNames" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="lblContractorNatureOfEmployee" xml:space="preserve">
+    <value>Nature of employee</value>
+  </data>
+  <data name="SurNames" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="lblContractorSurNames" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="LAnglais" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LFrancais" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="Adhocstatus" xml:space="preserve">
+    <value>Comment and Return</value>
+  </data>
+  <data name="lblCertification" xml:space="preserve">
+    <value>Certification</value>
+  </data>
+  <data name="lblCourseFees" xml:space="preserve">
+    <value>Course Fees</value>
+  </data>
+  <data name="lblCoursesDates" xml:space="preserve">
+    <value>Course Dates</value>
+  </data>
+  <data name="lblCourseVenue" xml:space="preserve">
+    <value>Course venue</value>
+  </data>
+  <data name="lblDepartureDate" xml:space="preserve">
+    <value>Departure Date</value>
+  </data>
+  <data name="lblDurationOfStay" xml:space="preserve">
+    <value>Duration of stay</value>
+  </data>
+  <data name="lblEntrepriseBenefit" xml:space="preserve">
+    <value>How will this training benefit the company</value>
+  </data>
+  <data name="lblLegalRequirement" xml:space="preserve">
+    <value>Legal Requirement</value>
+  </data>
+  <data name="lblReturnDate" xml:space="preserve">
+    <value>Return Date</value>
+  </data>
+  <data name="lblTrainingPurpose" xml:space="preserve">
+    <value>Purpose of Training: (Give sufficient reason for nominating this candidate)</value>
+  </data>
+  <data name="lblTransport" xml:space="preserve">
+    <value>Transport</value>
+  </data>
+  <data name="lblVisaRequirement" xml:space="preserve">
+    <value>Visa Requirement</value>
+  </data>
+  <data name="lblIndividualDevPlan" xml:space="preserve">
+    <value>Individual Development Plan</value>
+  </data>
+  <data name="txtCertificationError" xml:space="preserve">
+    <value>Certification cannot be empty !</value>
+  </data>
+  <data name="txtCourseDatesError" xml:space="preserve">
+    <value>Course Dates cannot be empty !</value>
+  </data>
+  <data name="txtCourseFeesError" xml:space="preserve">
+    <value>Course Fees cannot be empty !</value>
+  </data>
+  <data name="txtCourseVenueError" xml:space="preserve">
+    <value>Course venue cannot be empty !</value>
+  </data>
+  <data name="txtDepartureDateError" xml:space="preserve">
+    <value>Departure Date cannot be empty !</value>
+  </data>
+  <data name="txtDurationOfStayError" xml:space="preserve">
+    <value>Duration of stay cannot be empty !</value>
+  </data>
+  <data name="txtEnterpriseBenefitError" xml:space="preserve">
+    <value>Benefit for the company cannot be empty !</value>
+  </data>
+  <data name="txtIndividualPlanError" xml:space="preserve">
+    <value>Individual Plan cannot be empty !</value>
+  </data>
+  <data name="txtReturnDateError" xml:space="preserve">
+    <value>Return Date cannot be empty !</value>
+  </data>
+  <data name="txtTrainingPurposeError" xml:space="preserve">
+    <value>Purpose of Training cannot be empty !</value>
+  </data>
+  <data name="txtTransportError" xml:space="preserve">
+    <value>Transport cannot be empty !</value>
+  </data>
+  <data name="divUserAccountNameManager" xml:space="preserve">
+    <value>Manager Name</value>
+  </data>
+  <data name="txtNameManagerEmptyError" xml:space="preserve">
+    <value>Name Manager cannot be empty</value>
+  </data>
+  <data name="DocumentlangueID" xml:space="preserve">
+    <value>Document language</value>
+  </data>
+  <data name="DocumentNumber" xml:space="preserve">
+    <value>Document Number </value>
+  </data>
+  <data name="Documenttitle" xml:space="preserve">
+    <value>Document title </value>
+  </data>
+  <data name="DocumentVersionCode" xml:space="preserve">
+    <value>Document Version Code </value>
+  </data>
+  <data name="Documentype" xml:space="preserve">
+    <value>Document type </value>
+  </data>
+  <data name="lblarea" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="lblDCRequest" xml:space="preserve">
+    <value>Document Control Request </value>
+  </data>
+  <data name="lblNEWDCRequest" xml:space="preserve">
+    <value>New Document Control Request</value>
+  </data>
+  <data name="lblRisk" xml:space="preserve">
+    <value>Risk</value>
+  </data>
+  <data name="txtRiskEmptyError" xml:space="preserve">
+    <value>Risk cannot be empty !</value>
+  </data>
+  <data name="DocHardCopy" xml:space="preserve">
+    <value>Document Hard Copy</value>
+  </data>
+  <data name="DocTranslator" xml:space="preserve">
+    <value>Document Translator </value>
+  </data>
+  <data name="DocVesion" xml:space="preserve">
+    <value>Document Version </value>
+  </data>
+  <data name="lblDetailDCRequest" xml:space="preserve">
+    <value>Detail Document Control Request </value>
+  </data>
+  <data name="lblDocLink" xml:space="preserve">
+    <value>Document Link</value>
+  </data>
+  <data name="lblDocumentReviewVersionDate" xml:space="preserve">
+    <value>Document Review Date </value>
+  </data>
+  <data name="lblDocumentVersionDate" xml:space="preserve">
+    <value>Document Version Date</value>
+  </data>
+  <data name="AdditionalNotedId" xml:space="preserve">
+    <value>Additional Noted ID</value>
+  </data>
+  <data name="DocTransmittalNo" xml:space="preserve">
+    <value>Document Transmittal Number </value>
+  </data>
+  <data name="btnHistory" xml:space="preserve">
+    <value>Update History </value>
+  </data>
+  <data name="lbSignDate" xml:space="preserve">
+    <value>Sign Date </value>
+  </data>
+  <data name="dllStatusError" xml:space="preserve">
+    <value>Please select a status </value>
+  </data>
+  <data name="lblSignDateEmptyError" xml:space="preserve">
+    <value>Sign Date cannot be empty !</value>
+  </data>
+  <data name="lblRequestType" xml:space="preserve">
+    <value>Request Type </value>
+  </data>
+  <data name="selectdllDCRType" xml:space="preserve">
+    <value>Choose one </value>
+  </data>
+  <data name="FileMessageLbl" xml:space="preserve">
+    <value>: Please the change request form is required</value>
+  </data>
+  <data name="lblNewMCRequest" xml:space="preserve">
+    <value>New Material Entry</value>
+  </data>
+  <data name="lblCompany" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="lblEscoter" xml:space="preserve">
+    <value>Escorter Name</value>
+  </data>
+  <data name="lblDevice" xml:space="preserve">
+    <value>Device Information(make and model)</value>
+  </data>
+  <data name="lbldeviceenregister" xml:space="preserve">
+    <value>Private Device Access Request</value>
+  </data>
+  <data name="lbldeviceregistration" xml:space="preserve">
+    <value>New Private Device Access Request</value>
+  </data>
+  <data name="lblGlencorestaff" xml:space="preserve">
+    <value>Glencore staff and ICON</value>
+  </data>
+  <data name="lblDetaildeviceregistration" xml:space="preserve">
+    <value>Detail Report an Device Registration</value>
+  </data>
+  <data name="lblMacAdress" xml:space="preserve">
+    <value>Mac Address</value>
+  </data>
+  <data name="txtMacAddressError" xml:space="preserve">
+    <value>Mac Address must not be empty or contain less than 17 characters</value>
+  </data>
+  <data name="type" xml:space="preserve">
+    <value>Type (TV, Phone, Tablet, Game console)</value>
+  </data>
+  <data name="lstDeviceType" xml:space="preserve">
+    <value>Please select a device type</value>
+  </data>
+  <data name="lblCompanyName" xml:space="preserve">
+    <value>Company name</value>
+  </data>
+  <data name="lblContractNumber" xml:space="preserve">
+    <value>Contract number</value>
+  </data>
+  <data name="lblSiteManager" xml:space="preserve">
+    <value>Site manager</value>
+  </data>
+  <data name="lblContract" xml:space="preserve">
+    <value>Contract number</value>
+  </data>
+  <data name="lblContractorEmail" xml:space="preserve">
+    <value>Contractor Email</value>
+  </data>
+  <data name="lblDetailEscorter" xml:space="preserve">
+    <value>Detail From Escorter</value>
+  </data>
+  <data name="lblFunctionEscoter" xml:space="preserve">
+    <value>Escorter Function</value>
+  </data>
+  <data name="lblreason" xml:space="preserve">
+    <value>Reason Required on site</value>
+  </data>
+  <data name="lblCodeProduct" xml:space="preserve">
+    <value>code</value>
+  </data>
+  <data name="lblDesignation" xml:space="preserve">
+    <value>Designation</value>
+  </data>
+  <data name="lblItems" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="lblQuantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="lblContractorManager" xml:space="preserve">
+    <value>Contractor Manager</value>
+  </data>
+  <data name="lblSite" xml:space="preserve">
+    <value>Sites</value>
+  </data>
+  <data name="lblmsgMCR" xml:space="preserve">
+    <value>Insert Items</value>
+  </data>
+  <data name="lblStaffContractor" xml:space="preserve">
+    <value>Permanent Contractors (eg. IFS or CSS)</value>
+  </data>
+  <data name="lblStaffGlencore" xml:space="preserve">
+    <value>Permanent KCC Staff or ICON</value>
+  </data>
+  <data name="lblErrorDeviceRegistrationAccess" xml:space="preserve">
+    <value>You don't have access to register a private device. Please create an IT Request to request access</value>
+  </data>
+  <data name="btnItRequestGoBack" xml:space="preserve">
+    <value>Create an IT Request</value>
+  </data>
+  <data name="lblTitleAccesError" xml:space="preserve">
+    <value>Access error</value>
+  </data>
+  <data name="lstCompanyError" xml:space="preserve">
+    <value>Please select a valid company</value>
+  </data>
+  <data name="lstMaterialSitesError" xml:space="preserve">
+    <value>Please select a valid site</value>
+  </data>
+  <data name="txtContractEmptyError" xml:space="preserve">
+    <value>Contract number cannot be empty !</value>
+  </data>
+  <data name="txtContractManagerError" xml:space="preserve">
+    <value>Contractor manager cannot be empty !</value>
+  </data>
+  <data name="txtContractorEmailError" xml:space="preserve">
+    <value>Contractor email cannot be empty !</value>
+  </data>
+  <data name="txtEscorteurError" xml:space="preserve">
+    <value>Escoter name cannot be empty !</value>
+  </data>
+  <data name="txtEscorteurFunctionError" xml:space="preserve">
+    <value>Escorter function cannot be empty !</value>
+  </data>
+  <data name="txtMCEndDateError" xml:space="preserve">
+    <value>End date cannot be less than today's date or less than start date - Please select a valid start date</value>
+  </data>
+  <data name="txtMCStartDateError" xml:space="preserve">
+    <value>Start Date cannot be empty !</value>
+  </data>
+  <data name="txtReasonRequireError" xml:space="preserve">
+    <value>Reason require on site cannot be empty</value>
+  </data>
+  <data name="txtRequestdescriptionMCError" xml:space="preserve">
+    <value>Request description cannot be empty !</value>
+  </data>
+  <data name="dgItemsEmptyOrFullError" xml:space="preserve">
+    <value>The items list must contain between 1 and 100 articles</value>
+  </data>
+  <data name="lstSelectGeneric" xml:space="preserve">
+    <value>Choose One ...</value>
+  </data>
+  <data name="btnDetail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="lblArticleId" xml:space="preserve">
+    <value>Art Id</value>
+  </data>
+  <data name="lblBonentree" xml:space="preserve">
+    <value>Material Entry Permit</value>
+  </data>
+  <data name="lblIdBonEntree" xml:space="preserve">
+    <value>Permit N°:</value>
+  </data>
+  <data name="lblId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="lblItemRelease" xml:space="preserve">
+    <value>Items released</value>
+  </data>
+  <data name="lblReason1" xml:space="preserve">
+    <value>Reason </value>
+  </data>
+  <data name="lblEmployerId" xml:space="preserve">
+    <value>EmployerId</value>
+  </data>
+  <data name="txtIdEmployerEmptyError" xml:space="preserve">
+    <value>Please insert Id Employe</value>
+  </data>
+  <data name="lblReseach" xml:space="preserve">
+    <value>Search by Entry Permit N° of selected department and company</value>
+  </data>
+  <data name="lblMaterialControl" xml:space="preserve">
+    <value>Material Control</value>
+  </data>
+  <data name="lblBonsortie" xml:space="preserve">
+    <value>Material Removal Permit</value>
+  </data>
+  <data name="SendMailExceptionError" xml:space="preserve">
+    <value>Your request (ID: {0}) was saved successfully. There may be a delay in notifying the next approver. Please check the request details for updates or contact support if needed."</value>
+  </data>
+  <data name="EmailSendingErrorTitle" xml:space="preserve">
+    <value>Request Registered, Notification Issue</value>
+  </data>
+  <data name="LblNotificationFailureMessage" xml:space="preserve">
+    <value>There may be a delay in notifying the next approver. Please check the request details for updates</value>
+  </data>
+  <data name="RequestSuccessMessage" xml:space="preserve">
+    <value>Your request has been successfully registered.</value>
+  </data>
+  <data name="CheckBoxListApplicableAreasError" xml:space="preserve">
+    <value>Please select at least one applicable area</value>
+  </data>
+  <data name="CheckBoxListApprovalReviewersError" xml:space="preserve">
+    <value>Please select at least one reviewer</value>
+  </data>
+  <data name="CheckBoxListRolloutChannelsError" xml:space="preserve">
+    <value>Please select at least one rollout process</value>
+  </data>
+  <data name="ddlSetApplicabilityError" xml:space="preserve">
+    <value>Please define applicability to "YES" or "NO"</value>
+  </data>
+  <data name="LblEmailSendingError" xml:space="preserve">
+    <value>Request Registered, Notification Issue</value>
+  </data>
+</root>

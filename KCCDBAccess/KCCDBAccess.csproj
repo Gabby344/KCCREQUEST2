@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9B9810C-C3CE-4256-A8E6-C53E57BEF249}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KCCDBAccess</RootNamespace>
+    <AssemblyName>KCCDBAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="developper">
+      <HintPath>..\KCCREQUEST2\bin\developper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.XML">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComplexType1.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeveloperDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeveloperDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeveloperDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeveloperDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeveloperDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="FctDelegationApprover_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FctDelegationApprover__Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fct_Get_Employee_Delegation_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fct_Get_Employee_Delegation__Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KCCDBEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KCCDBEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KCCDBEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KCCDBEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KCCDBEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="KCCDBWrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SP_Check_AccessDevice_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Check_Aims_NoAccess_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Check_IsOpertionDep_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_DCRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_DCRequest_ProcessRole_User_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_DCRequest_Status_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_DSKRequestItem_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_DSKRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_DSKRequest_ProcessRole_User_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_DSKRequest_Status_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_EWRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_EWRequest_ProcessRole_User_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_EWRequest_Status_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_EWRequest_Task_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_EWRequest_TechnicalDepartment_Status_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_EWRequest_WorkType_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_ITRequestCategory_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_ITRequestItem_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_ITRequest_HomeApplication_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_ITRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_ITRequest_ProcessRole_User_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_ITRequest_Service_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_ITRequest_Status_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_KCCRequest_Module_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_KCCRequest_Parameter_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_RECTRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_RECTRequest_ProcessRole_User_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_RECTRequest_Status_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_TRANSRequest_Place_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_TRANSRequest_Place_Result1.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_TRANSRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_TRANSRequest_ProcessRole_User_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_TRANSRequest_Site_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_TRANSRequest_Status_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_TRNRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_TRNRequest_ProcessRole_User_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_TRNRequest_Status_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_CRUD_T_TRNRequest_Type_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetAllUsers_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetAll_Groups_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetAll_Ldap_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetUserByEmployeeID_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GetUserByLogin_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_AD_User_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_AMT_Site_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_ApplicableAreaConfig_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_ApplicableAreas_ByRequestId_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_ApplicablilityReviewGroupConfig_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_ByID_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_ByID_Result1.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_Document_Type_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_File_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_History_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_ReviewerGroups_ByRequestId_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_RolloutChannelConfig_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_RolloutProcesses_ByRequestId_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_Service_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DCRequest_Type_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Department_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DeviceRegistration_Location1_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DeviceRegistration_Location_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DeviceRegistration_Location_Result1.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DSKRequest_ByID_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DSKRequest_Detail_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DSKRequest_File_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DSKRequest_History_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DSKRequest_Item_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DSKRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DSKRequest_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_DSKRequest_Search_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EmployeeByLogin_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Employee_Contractor_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Employee_Dependent_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Employee_Of_Department_old_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Employee_Of_Department_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Employee_Of_Department_Using_table_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Employee_Process_Role_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Employee_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Employee_User_ORB_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Employee_User_Other_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Employee_User_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_ByID_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_Estimation_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_File_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_History_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_Manager_ByTechnicalDepartment_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_Planner_ByTechnicalDepartment_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_Search_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_Task_ByWorkTypeId_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_Task_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_TechnicalDepartment_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_EWRequest_WorkType_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_GroupsWithMails_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Group_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITProblem_Affected_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITProblem_Department_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITProblem_File_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITProblem_Impact_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITProblem_Location_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITProblem_priority_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITProblem_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITProblem_Urgency_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITProblem_WorkAround_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_ByID_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_CanCallBack_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_Category_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_CreatedBy_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_File_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_History_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_Item_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_Search_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_Service_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_ToApproveDetail_Had_Hoc_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_ITRequest_ToApproveDetail_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Access_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Action_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Budget_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Category_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Color_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Createdby_Dashboard_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_CreatedBy_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_HoldToApprove_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_IsAdmin_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Lang_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_GET_KCCRequest_Logiciel_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Module_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Priority_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Profile_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Report_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_Report_Result1.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_ToApprove_Dashboard_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_ToApprove_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_UserHold_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_KCCRequest_User_HomePage1_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_BonEntree_By_Department_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_BonEntree_By_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_BonEntree_Dedail_By_Department_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_BonEntree_Detail_By_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_BonEntree_Detail_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_BonSortie_By_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_BonSortie_Detail_By_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_History_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_History_S_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_Sites_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_ToApproveDetail1_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_ToApproveDetail_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_MCRequest_ToApproveDetail_S_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Module_ByUser_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Module_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_OutOfOffices_ByUser_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_ByID_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_CampLocation_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_Contract_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_CostCenter_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_Duration_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_EmployeeType_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_EmploymentEntity_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_File_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_History_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_JobGrade_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_Level_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_Search_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_RECTRequest_Type_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Role_ByUser_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Role_Other_ByUser_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_Syspro_CostCenter_Result.cs">
+      <DependentUpon>DeveloperDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRANSRequest_ByID_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRANSRequest_File_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRANSRequest_History_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRANSRequest_Place_BySite_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRANSRequest_Place_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRANSRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRANSRequest_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRANSRequest_Search_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRANSRequest_Site_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_ByID_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Calendars_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Calendars_Result1.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Calendar_ById_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Calendar_ByTrainingID_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Calendar_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Category_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Cours_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_DetailToIntegrate_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Detail_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_File_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_History_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Location_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Motivation_ByID_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_ProcessRole_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Search_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Service_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Get_TRNRequest_Type_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Insert_EWRequest_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Insert_ITRequest_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Insert_MCRequest_BonEntree_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_Insert_MCRequest_BonSortie_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEST_SP_Initialize_DSKRequest_Data_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEST_SP_Initialize_RECTRequest_Data_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToDeleteSP_Get_ITRequest_ToApprove_Result.cs">
+      <DependentUpon>KCCDBEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="KCCDBEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KCCDBEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="DeveloperDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DeveloperDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DeveloperDB.edmx.diagram">
+      <DependentUpon>DeveloperDB.edmx</DependentUpon>
+    </None>
+    <None Include="KCCDBEntities.edmx.diagram">
+      <DependentUpon>KCCDBEntities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DeveloperDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DeveloperDB.edmx</DependentUpon>
+      <LastGenOutput>DeveloperDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DeveloperDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DeveloperDB.edmx</DependentUpon>
+      <LastGenOutput>DeveloperDB.cs</LastGenOutput>
+    </Content>
+    <Content Include="KCCDBEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KCCDBEntities.edmx</DependentUpon>
+      <LastGenOutput>KCCDBEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="KCCDBEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KCCDBEntities.edmx</DependentUpon>
+      <LastGenOutput>KCCDBEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

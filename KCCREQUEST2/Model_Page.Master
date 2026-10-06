@@ -1,0 +1,336 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Model_Page.master.cs" Inherits="KCCREQUEST2.Model_Page" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ADMIN | KCC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8"/>
+     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="css/font-awesome.css" rel="stylesheet"/> 
+    <!-- jQuery -->
+    <link href='http://localhost:41657/fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/>
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+    <!-- //lined-icons -->
+    <script src="Scripts/jquery-3.2.1.js"></script>
+    <script src="Scripts/jquery-ui-1.12.1.js"></script>
+    <link href="Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="js/amcharts.js"></script>	
+    <script src="js/serial.js"></script>	
+    <script src="js/light.js"></script>	
+    <script src="js/radar.js"></script>	
+    <link href="css/fabochart.css" rel='stylesheet' type='text/css' />
+	 <!-- RECHERCHE RAPIDE -->
+    
+    <!--clock init-->
+    <script src="../js/css3clock.js"></script>
+    <!--Easy Pie Chart-->
+    <!--skycons-icons-->
+    <script src="../js/skycons.js"></script>
+    <style type="text/css">
+	    .Button13{
+                position:absolute;
+                top: 0;
+                right:0;
+			    border-style:none;
+			    background-color:#ff6a00 !important;
+			    color:white;
+			    font-family:Candara;
+			    border-color:#ff6a00 !important;
+			    width:40%;
+			    height:30px;
+			    font-size:13px;
+			    border-radius: 5px;
+                display:none;
+	    }
+	    .Button12{
+                position:absolute;
+                top: 0;
+                left:30%;
+			    border-style:none;
+			    background-color:#1d66ad !important;
+			    color:white;
+			    font-family:Candara;
+			    border-color:#1d66ad !important;
+			    width:40%;
+			    height:30px;
+			    font-size:13px;
+			    border-radius: 5px;
+	    }
+        td {
+            position:relative;
+        }
+        th {
+            background-color:#1d66ad;
+            color: #fff !important;
+        }
+        #table {
+
+            background-color: transparent; 
+            height: 600px;
+            overflow-x: scroll;
+            overflow-y:scroll; 
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+<div class="page-container">
+   <!--/content-inner-->
+	<div class="left-content">
+	   <div class="inner-content">
+		<!-- A METTRE DANS UN FICHIER HEADER.ASPX -->
+			<div class="header-section">
+						<!--menu-right-->
+				<div class="top_menu"  style="background-color:rgb(0,177,168)">
+
+					<div class="profile_details_left">
+						<ul class="nofitications-dropdown">
+							<li class="dropdown note" style="visibility: hidden;">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i> <span class="badge blue1">9<ul class="dropdown-menu two">
+								<li>
+									<div class="notification_header">
+										<h3>You have 9 pending task</h3>
+									</div>
+								</li>
+								<li>
+									<a href="#">
+											<div class="task-info">
+											<span class="task-desc">Database update</span><span class="percentage">40%</span>
+											<div class="clearfix"></div>	
+										   </div>
+											<div class="progress progress-striped active">
+											 <div class="bar yellow" style="width:40%;"></div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="task-info">
+											<span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
+										   <div class="clearfix"></div>	
+										</div>
+									   
+										<div class="progress progress-striped active">
+											 <div class="bar green" style="width:90%;"></div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="task-info">
+											<span class="task-desc">Mobile App</span><span class="percentage">33%</span>
+											<div class="clearfix"></div>	
+										</div>
+									   <div class="progress progress-striped active">
+											 <div class="bar red" style="width: 33%;"></div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<div class="task-info">
+											<span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
+										   <div class="clearfix"></div>	
+										</div>
+										<div class="progress progress-striped active">
+											 <div class="bar  blue" style="width: 80%;"></div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<div class="notification_bottom">
+										<a href="#">See all pending task</a>
+									</div> 
+								</li>
+							</ul>
+						</li>		   							   		
+							<div class="clearfix"></div>	
+						</ul>
+					</div>
+					<div class="clearfix"></div>	
+					<!--//profile_details-->
+				</div>
+				<!--//menu-right-->
+					<div class="clearfix"></div>
+				</div>
+				<!-- A METTRE DANS UN FICHIER HEADER.ASPX -->
+            <div style="padding-left:4%">
+						<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                       
+
+                        </asp:ContentPlaceHolder>
+                 </div>
+					<!--A METTRE DANS UN FICHIER FOOTER.ASPX-->
+						<footer style="display:none;">
+						   <p>&copy 2018 KAMOTO COPPER COMPAGNY . All Rights Reserved | KCC REQUEST</p>
+						</footer>
+					<!--A METTRE DANS UN FICHIER FOOTER.ASPX-->
+					</div>
+				</div>
+
+					<!-- SECTION A METTRE DANS UN FICHIER  NAVIGATION.ASPX --> 
+				<div class="sidebar-menu" style="width:17%; background-color:rgb(0,52,104)">
+					<header class="logo">
+						<a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> 
+						<a href="../../Admin/default_admin.aspx"> 
+							<span id="logo">
+								<h1 style="font-weight: lighter; font-size: 24px; margin-top: 7px;">Kcc Request Admin</h1>
+							</span>
+					  	</a> 
+					</header>
+					<div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+			
+					<div class="down">	
+					  	<a href="../../Default_View_Approve.aspx"><img src="../../images/kcc_logo.jpg" width="150px" height="50px" style="display:none"/></a>
+					  	<a href="../../Default_View_Approve.aspx"><span class="name-caret">KCC Request</span></a>
+					 	
+					</div>
+							  
+                    <div class="menu" >
+						<ul id="menu" >
+						    <li id="mITrequest" runat="server" ><a href="#"><i class="fa fa-laptop"></i> <span>IT Request</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+							    <ul id="menu-academico-suby"  >
+								    <li><asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="~/Admin/IT_Request/New_Item.aspx"><i class="fa fa-desktop"></i> <span> ITEM</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink18" runat="server" NavigateUrl="~/Admin/IT_Request/New_category.aspx"><i class="fa fa-puzzle-piece"></i> <span> CATEGORIE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="~/Admin/IT_Request/New_service.aspx"><i class="fa fa-cog"></i> <span> SERVICE</span></asp:HyperLink></li>
+							        <li><asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="~/Admin/IT_Request/New_ProcessRole.aspx"><i class="fa fa-user"></i> <span> ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink16" runat="server" NavigateUrl="~/Admin/IT_Request/New_ProcessRole_User.aspx"><i class="fa fa-user-md"></i> <span> PROCESS ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink44" runat="server" NavigateUrl="~/Admin/IT_Request/NewHomeApplication.aspx"><i class="fa fa-user-md"></i> <span>HOME APPLICATION</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink17" runat="server" NavigateUrl="~/Admin/IT_Request/New_Status.aspx"><i class="fa fa-clock-o"></i> <span> STATUS & MAIL</span></asp:HyperLink></li>
+							       <li><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Admin/IT_Request/RequistionRequests.aspx"><i class="fa fa-list"></i> <span>REQUISITIONS</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink33" runat="server" Target="_blank" NavigateUrl="https://intranet.ktg.cd.glencore.net/English/_layouts/15/Lightbox.aspx?url=https%3A%2F%2Fintranet.ktg.cd.glencore.net%2FEnglish%2FIT%20SharePoint%2FIS%20Function%2FApplications%20Development%2FProjects%2FKCC%20Request%20-%20New%20Version%2FFlowcharts%2FITRequest_Flowchart.jpg"><i class="fa fa-bars"></i> <span>WORKFLOW</span></asp:HyperLink></li>
+                                </ul>
+						    </li>
+                            <li id="mDSKRequest" runat="server" ><a href="#"><i class="fa fa-mobile"></i> <span>Radio & CCTV Request</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                                <ul >
+                                    <li><asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/Admin/DSK_Request/New_DSK_Item.aspx"><i class="fa fa-desktop"></i> <span> ITEM</span></asp:HyperLink></li>
+                                  <%--  <li><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/Admin/IT_Request/New_category.aspx"><i class="fa fa-puzzle-piece"></i> <span> CATEGORIE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Admin/IT_Request/New_service.aspx"><i class="fa fa-cog"></i> <span> SERVICE</span></asp:HyperLink></li>--%>
+							        <li><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/Admin/DSK_Request/New_DSK_ProcessRole.aspx"><i class="fa fa-user"></i> <span> ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/Admin/DSK_Request/New_DSK_ProcessRoleUser.aspx"><i class="fa fa-user-md"></i> <span> PROCESS ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/Admin/DSK_Request/New_DSK_Status.aspx"><i class="fa fa-clock-o"></i> <span> STATUS & MAIL</span></asp:HyperLink></li>
+                                      <li><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/Admin/DSK_Request/RequisitionDSK.aspx"><i class="fa fa-list"></i> <span>REQUISITIONS</span></asp:HyperLink></li>
+							        <li><asp:HyperLink ID="HyperLink34" runat="server" Target="_blank" NavigateUrl="https://intranet.ktg.cd.glencore.net/English/_layouts/15/Lightbox.aspx?url=https%3A%2F%2Fintranet.ktg.cd.glencore.net%2FEnglish%2FIT%20SharePoint%2FIS%20Function%2FApplications%20Development%2FProjects%2FKCC%20Request%20-%20New%20Version%2FFlowcharts%2FRadioRequest_Flowchart.jpg"><i class="fa fa-bars"></i> <span>WORKFLOW</span></asp:HyperLink></li>
+                                    
+                                     </ul>
+                            </li>
+                            <li id="mEWRequest" runat="server" ><a href="#"><i class="fa fa-circle"></i> <span>EW Request</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                                <ul>
+							        <li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Admin/EW_Request/New_EW_ProcessRole.aspx"><i class="fa fa-user"></i> <span> ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Admin/EW_Request/New_EW_ProcessRoleUser.aspx"><i class="fa fa-user-md"></i> <span> PROCESS ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Admin/EW_Request/New_EW_Status.aspx"><i class="fa fa-clock-o"></i> <span> STATUS & MAIL</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="~/Admin/EW_Request/New_EW_TechnicalDepartment.aspx"><i class="fa fa-circle"></i> <span>TECHNICAL DEPARTMENT</span></asp:HyperLink></li>
+                                                                  <li><asp:HyperLink ID="HyperLink30" runat="server" NavigateUrl="~/Admin/EW_Request/New_WorkType.aspx"><i class="fa fa-briefcase"></i> <span>WORK TYPE</span></asp:HyperLink></li>
+                                                                  <li><asp:HyperLink ID="HyperLink31" runat="server" NavigateUrl="~/Admin/EW_Request/NewTask.aspx"><i class="fa fa-cogs"></i> <span>TASK</span></asp:HyperLink></li>
+                                      <li><asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="~/Admin/EW_Request/EWRequestRequisition.aspx"><i class="fa fa-list"></i> <span>REQUISITIONS</span></asp:HyperLink></li>
+                                     <li><asp:HyperLink ID="HyperLink32" runat="server" Target="_blank" NavigateUrl="https://intranet.ktg.cd.glencore.net/English/_layouts/15/Lightbox.aspx?url=https%3A%2F%2Fintranet.ktg.cd.glencore.net%2FEnglish%2FIT%20SharePoint%2FIS%20Function%2FApplications%20Development%2FProjects%2FKCC%20Request%20-%20New%20Version%2FFlowcharts%2FEWRequest_FlowChart.PNG"><i class="fa fa-bars"></i> <span>WORKFLOW</span></asp:HyperLink></li>
+							    </ul>
+                            </li>
+                        <%--    <li id="Li3" ><a href="#"><i class="fa fa-briefcase"></i><span>PPERequest</span></a>
+                            </li--%>
+                            <li id="mRecruitmentRequest" runat="server" ><a href="#"><i class="fa fa-users"></i> <span>RECRUITMENT Request </span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                                <ul>
+                                    <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Admin/HR_Request/New_HR_ProcessRole.aspx"><i class="fa fa-user"></i> <span> ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Admin/HR_Request/New_HR_ProcessRoleUser.aspx"><i class="fa fa-user-md"></i> <span> PROCESS ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/HR_Request/New_HR_Status.aspx"><i class="fa fa-clock-o"></i> <span> STATUS & MAIL</span></asp:HyperLink></li>
+                                     <li><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/Admin/HR_Request/HRRequisition.aspx"><i class="fa fa-list"></i> <span>REQUISITIONS</span></asp:HyperLink></li>
+							  							        <li><asp:HyperLink ID="HyperLink35" runat="server" Target="_blank" NavigateUrl="https://intranet.ktg.cd.glencore.net/English/_layouts/15/Lightbox.aspx?url=https%3A%2F%2Fintranet.ktg.cd.glencore.net%2FEnglish%2FIT%20SharePoint%2FIS%20Function%2FApplications%20Development%2FProjects%2FKCC%20Request%20-%20New%20Version%2FFlowcharts%2FRecruitmentRequest_Flowchart.jpg"><i class="fa fa-bars"></i> <span>WORKFLOW</span></asp:HyperLink></li>
+                                    
+                                      </ul>
+                            </li>
+                            <li id="mTrainingRequest" runat="server" ><a href="#"><i class="fa fa-book"></i> <span>TRAINING Request</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                                <ul>
+                                    <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Admin/TRN_Request/New_TRN_ProcessRole.aspx"><i class="fa fa-user"></i> <span> ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Admin/TRN_Request/New_TRN_ProcessRoleUser.aspx"><i class="fa fa-user-md"></i> <span> PROCESS ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin/TRN_Request/New_TRN_Status.aspx"><i class="fa fa-clock-o"></i> <span> STATUS & MAIL</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="~/Admin/TRN_Request/New_TRN_Type.aspx"><i class="fa fa-circle"></i> <span> TYPES</span></asp:HyperLink></li>
+                                     <li><asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="~/Admin/TRN_Request/TrainingRequest.aspx"><i class="fa fa-list"></i> <span>REQUISITIONS</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="~/Admin/TRN_Request/TrainingIntegrate.aspx"><i class="fa fa-list"></i> <span>INTEGRATION TMS</span></asp:HyperLink></li>
+							     <li><asp:HyperLink ID="HyperLink36" runat="server" Target="_blank" NavigateUrl="https://intranet.ktg.cd.glencore.net/English/_layouts/15/Lightbox.aspx?url=https%3A%2F%2Fintranet.ktg.cd.glencore.net%2FEnglish%2FIT%20SharePoint%2FIS%20Function%2FApplications%20Development%2FProjects%2FKCC%20Request%20-%20New%20Version%2FFlowcharts%2FTrainingRequest_Flowchart.jpg"><i class="fa fa-bars"></i> <span>WORKFLOW</span></asp:HyperLink></li>
+                                
+                                </ul>
+                            </li>
+
+							 <li id="mTransRequest" runat="server" ><a href="#"><i class="fa fa-book"></i> <span>TRANSPORT Request</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                                <ul>
+                                    <li><asp:HyperLink ID="HyperLink37" runat="server" NavigateUrl="~/Admin/TRANS_Request/New_TRANS_ProcessRole.aspx"><i class="fa fa-user"></i> <span> ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink38" runat="server" NavigateUrl="~/Admin/TRANS_Request/New_TRANS_ProcessRoleUser.aspx"><i class="fa fa-user-md"></i> <span> PROCESS ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink39" runat="server" NavigateUrl="~/Admin/TRANS_Request/New_TRANS_Status.aspx"><i class="fa fa-clock-o"></i> <span> STATUS & MAIL</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink40" runat="server" NavigateUrl="~/Admin/TRANS_Request/New_TRANS_Site.aspx"><i class="fa fa-clock-o"></i> <span> SITE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink42" runat="server" NavigateUrl="~/Admin/TRANS_Request/New_TRANS_Place.aspx"><i class="fa fa-clock-o"></i> <span> PLACE</span></asp:HyperLink></li>
+									<li><asp:HyperLink ID="HyperLink41" runat="server" NavigateUrl="~/Admin/TRANS_Request/TRANSRequisition.aspx"><i class="fa fa-list"></i> <span>REQUISITIONS</span></asp:HyperLink></li>
+							     <li><asp:HyperLink ID="HyperLink43" runat="server" Target="_blank" NavigateUrl="https://intranet.ktg.cd.glencore.net/English/_layouts/15/Lightbox.aspx?url=https%3A%2F%2Fintranet.ktg.cd.glencore.net%2FEnglish%2FIT%20SharePoint%2FIS%20Function%2FApplications%20Development%2FProjects%2FKCC%20Request%20-%20New%20Version%2FFlowcharts%2FTransportRequest_Flowchart.jpg"><i class="fa fa-bars"></i> <span>WORKFLOW</span></asp:HyperLink></li>
+                                
+                                </ul>
+                            </li>
+
+                            <li id="mDCRequest" runat="server" ><a href="#"><i class="fa fa-book"></i> <span>Document Request</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                                <ul>
+                                    <li><asp:HyperLink ID="HyperLink45" runat="server" NavigateUrl="~/Admin/DC_Request/New_DC_ProcessRole.aspx"><i class="fa fa-user"></i> <span> ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink46" runat="server" NavigateUrl="~/Admin/DC_Request/New_DC_ProcessRoleUser.aspx"><i class="fa fa-user-md"></i> <span> PROCESS ROLE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink47" runat="server" NavigateUrl="~/Admin/DC_Request/NEW_DC_Status.aspx"><i class="fa fa-clock-o"></i> <span> STATUS & MAIL</span></asp:HyperLink></li>
+<%--                                    <li><asp:HyperLink ID="HyperLink48" runat="server" NavigateUrl="~/Admin/TRANS_Request/New_TRANS_Site.aspx"><i class="fa fa-clock-o"></i> <span> SITE</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink49" runat="server" NavigateUrl="~/Admin/TRANS_Request/New_TRANS_Place.aspx"><i class="fa fa-clock-o"></i> <span> PLACE</span></asp:HyperLink></li>--%>
+									<li><asp:HyperLink ID="HyperLink50" runat="server" NavigateUrl="~/Admin/DC_Request/DCRequest_Requisition.aspx"><i class="fa fa-list"></i> <span>REQUISITIONS</span></asp:HyperLink></li>
+							     <li><asp:HyperLink ID="HyperLink51" runat="server" Target="_blank" NavigateUrl="#"><i class="fa fa-bars"></i> <span>WORKFLOW</span></asp:HyperLink></li>
+                                
+                                </ul>
+                            </li>
+
+
+
+                              <li id="mParametre" runat="server" ><a href="#"><i class="fa fa-wrench"></i> <span>Parameter</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                                <ul>
+                                    <li><asp:HyperLink ID="HyperLink28" runat="server" NavigateUrl="~/Admin/Parametre/CouleurMail.aspx"><i class="fa fa-envelope"></i> <span>Modules</span></asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink29" runat="server" NavigateUrl="~/Admin/Parametre/ParametreLink.aspx"><i class="fa fa-link"></i> <span>Links</span></asp:HyperLink></li>
+
+							    </ul>
+                            </li>
+
+                        </ul>
+					</div>
+				</div>
+					<!-- SECTION A METTRE DANS UN FICHIER  NAVIGATION.ASPX --> 
+				<div class="clearfix"></div>		
+			</div>
+
+     </form>
+    <script>
+    	var toggle = true;
+
+    	$(".sidebar-icon").click(function () {
+    		if (toggle) {
+    		    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+    		    $("#menu span").css({ "position": "absolute" });
+    		}
+    		else {
+    		    $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+    		    setTimeout(function () {
+    		        $("#menu span").css({ "position": "relative" });
+    		    }, 400);
+    		}
+
+    		toggle = !toggle;                
+    	});
+	</script>
+
+<!--A METTRE DANS UN FICHIER SCRIPT.ASPX -->
+	<script type="text/javascript" src="../js/TweenLite.min.js"></script>
+	<script type="text/javascript" src="../js/CSSPlugin.min.js"></script>
+	<script src="../js/jquery.nicescroll.js"></script>
+	<script src="../js/scripts.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<!--A METTRE DANS UN FICHIER SCRIPT.ASPX -->
+	
+  
+</body>
+</html>

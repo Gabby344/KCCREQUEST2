@@ -1,0 +1,1303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="developpers_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="Fct_Get_AIMS_Group" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="matricule" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Fct_Get_Approver" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="EmployeeId" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Fct_Get_Employee_Approver" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="EmployeeId" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Fct_Get_Employee_COS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="DepartmentId" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Fct_Get_Employee_Delegation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DelegateId" Type="varchar" Mode="In" />
+          <Parameter Name="ModuleId" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ApproverId" Type="varchar(max)" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="Fct_Get_Employee_HOD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="EmployeeID" Type="varchar" Mode="In" />
+          <Parameter Name="DepartmentCode" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Fct_Get_Employee_Name" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="EmployeeId" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Fct_Get_Employee_Type" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="EmployeeId" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Add_AD_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Samaccountname" Type="varchar" Mode="In" />
+          <Parameter Name="DisplayName" Type="varchar" Mode="In" />
+          <Parameter Name="EmployeeID" Type="varchar" Mode="In" />
+          <Parameter Name="MobilePhone" Type="varchar" Mode="In" />
+          <Parameter Name="IPPhone" Type="varchar" Mode="In" />
+          <Parameter Name="Department" Type="varchar" Mode="In" />
+          <Parameter Name="Title" Type="varchar" Mode="In" />
+          <Parameter Name="Mail" Type="varchar" Mode="In" />
+          <Parameter Name="TypeLdap" Type="varchar" Mode="In" />
+          <Parameter Name="Groups" Type="varchar(max)" Mode="In" />
+          <Parameter Name="LastLogon" Type="datetime2" Mode="In" />
+        </Function>
+        <Function Name="SP_Add_Group" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="groupName" Type="varchar" Mode="In" />
+          <Parameter Name="groupDisplayName" Type="varchar" Mode="In" />
+          <Parameter Name="groupMail" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Delete_AD_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Samaccountname" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Delete_Group" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="groupName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Get_AD_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmployeeId" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Get_AMT_Equipment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SiteID" Type="varchar" Mode="In" />
+          <Parameter Name="Fleet" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Get_AMT_Fleet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SiteID" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_Get_AMT_Site" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Get_Company" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Get_Department" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Get_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Get_Employee_Contractor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Get_Employee_Dependent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Get_Employee_Of_Department" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmployeeId" Type="varchar" Mode="In" />
+          <Parameter Name="DepartementCode" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Get_Employee_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Get_EmployeeByLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmployeId" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_Get_Group" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="groupName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Get_Module" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Get_OutOfOffices_ByUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserLogin" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Get_Role_ByUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Module" Type="varchar" Mode="In" />
+          <Parameter Name="UserLogin" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Get_Syspro_CostCenter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Get_Syspro_CostCenter_Of_Department" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DepartmentID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Get_User_Image" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmployeeID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_GetAll_Groups" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_GetAll_Ldap" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_GetAllUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_GetAllUsersWithPicture" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_GetUserByEmployeeID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmployeeID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_GetUserByLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Login" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Insert_OutOfOffices" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FromEmployeeID" Type="varchar" Mode="In" />
+          <Parameter Name="FromUser" Type="varchar" Mode="In" />
+          <Parameter Name="ToEmployeeID" Type="varchar" Mode="In" />
+          <Parameter Name="ToUser" Type="varchar" Mode="In" />
+          <Parameter Name="Module" Type="varchar" Mode="In" />
+          <Parameter Name="Role" Type="varchar" Mode="In" />
+          <Parameter Name="StartDate" Type="datetime" Mode="In" />
+          <Parameter Name="EndDate" Type="datetime" Mode="In" />
+          <Parameter Name="Comment" Type="varchar" Mode="In" />
+          <Parameter Name="CreatedBy" Type="varchar" Mode="In" />
+          <Parameter Name="ProID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_Insert_OutOfOffices_History" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserLogin" Type="varchar" Mode="In" />
+          <Parameter Name="Action" Type="varchar" Mode="In" />
+          <Parameter Name="Comment" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_Job_Send_Mail_Reminder_Delegation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Send_Mail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Login" Type="varchar" Mode="In" />
+          <Parameter Name="Message" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_Send_Mail_Service_Request_Saysaid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_Send_MailOutOfOffice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DelegateFrom" Type="varchar" Mode="In" />
+          <Parameter Name="DelegateTo" Type="varchar" Mode="In" />
+          <Parameter Name="Date1" Type="varchar" Mode="In" />
+          <Parameter Name="Date2" Type="varchar" Mode="In" />
+          <Parameter Name="Role" Type="varchar(max)" Mode="In" />
+          <Parameter Name="Comment" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_Update_Add_AD_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Samaccountname" Type="varchar" Mode="In" />
+          <Parameter Name="DisplayName" Type="varchar" Mode="In" />
+          <Parameter Name="EmployeeID" Type="varchar" Mode="In" />
+          <Parameter Name="MobilePhone" Type="varchar" Mode="In" />
+          <Parameter Name="IPPhone" Type="varchar" Mode="In" />
+          <Parameter Name="Department" Type="varchar" Mode="In" />
+          <Parameter Name="Title" Type="varchar" Mode="In" />
+          <Parameter Name="Mail" Type="varchar" Mode="In" />
+          <Parameter Name="Groups" Type="varchar(max)" Mode="In" />
+          <Parameter Name="LastLogon" Type="datetime2" Mode="In" />
+        </Function>
+        <Function Name="SP_Update_OutOfOffices_Status" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="StatusID" Type="int" Mode="In" />
+          <Parameter Name="UserLogin" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="developpers_dbModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="developpers_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="Fct_Get_Employee_Delegation_Result">
+          <Property Name="ApproverId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Fct_Get_Employee_Delegation__Result">
+          <Property Name="ApproverId" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="true" />
+          <Property Name="ApproverLogin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="true" />
+        </ComplexType>
+        <EntityContainer Name="developpers_dbEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="Fct_Get_Employee_Delegation" IsComposable="true" ReturnType="Collection(developpers_dbModel.Fct_Get_Employee_Delegation_Result)">
+            <Parameter Name="DelegateId" Mode="In" Type="String" />
+            <Parameter Name="ModuleId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Fct_Get_Employee_Delegation_" IsComposable="true" ReturnType="Collection(developpers_dbModel.Fct_Get_Employee_Delegation__Result)">
+          <Parameter Name="DelegateId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Add_AD_User">
+            <Parameter Name="Samaccountname" Mode="In" Type="String" />
+            <Parameter Name="DisplayName" Mode="In" Type="String" />
+            <Parameter Name="EmployeeID" Mode="In" Type="String" />
+            <Parameter Name="MobilePhone" Mode="In" Type="String" />
+            <Parameter Name="IPPhone" Mode="In" Type="String" />
+            <Parameter Name="Department" Mode="In" Type="String" />
+            <Parameter Name="Title" Mode="In" Type="String" />
+            <Parameter Name="Mail" Mode="In" Type="String" />
+            <Parameter Name="TypeLdap" Mode="In" Type="String" />
+            <Parameter Name="Groups" Mode="In" Type="String" />
+            <Parameter Name="LastLogon" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Add_Group">
+            <Parameter Name="groupName" Mode="In" Type="String" />
+            <Parameter Name="groupDisplayName" Mode="In" Type="String" />
+            <Parameter Name="groupMail" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Check_Aims_NoAccess" ReturnType="Collection(developpers_dbModel.SP_Check_Aims_NoAccess_Result)">
+          <Parameter Name="employee" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Delete_AD_User">
+          <Parameter Name="Samaccountname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Delete_Group">
+          <Parameter Name="groupName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_AD_User" ReturnType="Collection(developpers_dbModel.SP_Get_AD_User_Result)">
+          <Parameter Name="EmployeeId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_AMT_Equipment" ReturnType="Collection(String)">
+            <Parameter Name="SiteID" Mode="In" Type="String" />
+            <Parameter Name="Fleet" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_AMT_Fleet" ReturnType="Collection(String)">
+          <Parameter Name="SiteID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_AMT_Site" ReturnType="Collection(developpers_dbModel.SP_Get_AMT_Site_Result)" />
+          <FunctionImport Name="SP_Get_Company" ReturnType="Collection(String)" />
+          <FunctionImport Name="SP_Get_Department" ReturnType="Collection(developpers_dbModel.SP_Get_Department_Result)" />
+          <FunctionImport Name="SP_Get_Employee" ReturnType="Collection(developpers_dbModel.SP_Get_Employee_Result)" />
+          <FunctionImport Name="SP_Get_Employee_Contractor" ReturnType="Collection(developpers_dbModel.SP_Get_Employee_Contractor_Result)" />
+          <FunctionImport Name="SP_Get_Employee_Dependent" ReturnType="Collection(developpers_dbModel.SP_Get_Employee_Dependent_Result)" />
+          <FunctionImport Name="SP_Get_Employee_Of_Department" ReturnType="Collection(developpers_dbModel.SP_Get_Employee_Of_Department_Result)">
+            <Parameter Name="EmployeeId" Mode="In" Type="String" />
+            <Parameter Name="DepartementCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_EmployeeByLogin" ReturnType="Collection(developpers_dbModel.SP_Get_EmployeeByLogin_Result)">
+          <Parameter Name="EmployeId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_Group" ReturnType="Collection(developpers_dbModel.SP_Get_Group_Result)">
+          <Parameter Name="groupName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_GroupsWithMails" ReturnType="Collection(developpers_dbModel.SP_Get_GroupsWithMails_Result)" />
+          <FunctionImport Name="SP_Get_Syspro_CostCenter" ReturnType="Collection(developpers_dbModel.SP_Get_Syspro_CostCenter_Result)" />
+          <FunctionImport Name="SP_Get_Syspro_CostCenter_Of_Department">
+          <Parameter Name="DepartmentID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_User_Image">
+          <Parameter Name="EmployeeID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_GetAll_Groups" ReturnType="Collection(developpers_dbModel.SP_GetAll_Groups_Result)" />
+          <FunctionImport Name="SP_GetAll_Ldap" ReturnType="Collection(developpers_dbModel.SP_GetAll_Ldap_Result)" />
+          <FunctionImport Name="SP_GetAllUsers" ReturnType="Collection(developpers_dbModel.SP_GetAllUsers_Result)" />
+          <FunctionImport Name="SP_GetAllUsersWithPicture" />
+          <FunctionImport Name="SP_GetUserByEmployeeID" ReturnType="Collection(developpers_dbModel.SP_GetUserByEmployeeID_Result)">
+          <Parameter Name="EmployeeID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_GetUserByLogin" ReturnType="Collection(developpers_dbModel.SP_GetUserByLogin_Result)">
+          <Parameter Name="Login" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Insert_OutOfOffices">
+            <Parameter Name="FromEmployeeID" Mode="In" Type="String" />
+            <Parameter Name="FromUser" Mode="In" Type="String" />
+            <Parameter Name="ToEmployeeID" Mode="In" Type="String" />
+            <Parameter Name="ToUser" Mode="In" Type="String" />
+            <Parameter Name="Module" Mode="In" Type="String" />
+            <Parameter Name="Role" Mode="In" Type="String" />
+            <Parameter Name="StartDate" Mode="In" Type="DateTime" />
+            <Parameter Name="EndDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Comment" Mode="In" Type="String" />
+            <Parameter Name="CreatedBy" Mode="In" Type="String" />
+            <Parameter Name="ProID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Job_Send_Mail_Reminder_Delegation" />
+          <FunctionImport Name="SP_Send_Mail">
+            <Parameter Name="Login" Mode="In" Type="String" />
+            <Parameter Name="Message" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Send_Mail_Service_Request_Saysaid" />
+          <FunctionImport Name="SP_Update_Add_AD_User">
+            <Parameter Name="Samaccountname" Mode="In" Type="String" />
+            <Parameter Name="DisplayName" Mode="In" Type="String" />
+            <Parameter Name="EmployeeID" Mode="In" Type="String" />
+            <Parameter Name="MobilePhone" Mode="In" Type="String" />
+            <Parameter Name="IPPhone" Mode="In" Type="String" />
+            <Parameter Name="Department" Mode="In" Type="String" />
+            <Parameter Name="Title" Mode="In" Type="String" />
+            <Parameter Name="Mail" Mode="In" Type="String" />
+            <Parameter Name="Groups" Mode="In" Type="String" />
+            <Parameter Name="LastLogon" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Update_Add_AD_User_LIVE149" />
+          <FunctionImport Name="SP_Update_OutOfOffices_Status">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="StatusID" Mode="In" Type="Int32" />
+            <Parameter Name="UserLogin" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_Employee_User" ReturnType="Collection(developpers_dbModel.SP_Get_Employee_User_Result)" />
+          <FunctionImport Name="SP_Send_MailOutOfOffice">
+            <Parameter Name="DelegateFrom" Mode="In" Type="String" />
+            <Parameter Name="DelegateTo" Mode="In" Type="String" />
+            <Parameter Name="Date1" Mode="In" Type="String" />
+            <Parameter Name="Date2" Mode="In" Type="String" />
+            <Parameter Name="Role" Mode="In" Type="String" />
+            <Parameter Name="Comment" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_Module" ReturnType="Collection(developpers_dbModel.SP_Get_Module_Result)" />
+          <FunctionImport Name="SP_Get_Role_ByUser" ReturnType="Collection(developpers_dbModel.SP_Get_Role_ByUser_Result)">
+            <Parameter Name="Module" Mode="In" Type="String" />
+            <Parameter Name="UserLogin" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_OutOfOffices_ByUser" ReturnType="Collection(developpers_dbModel.SP_Get_OutOfOffices_ByUser_Result)">
+          <Parameter Name="UserLogin" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_Employee_Of_Department_old" ReturnType="Collection(developpers_dbModel.SP_Get_Employee_Of_Department_old_Result)">
+            <Parameter Name="EmployeeId" Mode="In" Type="String" />
+            <Parameter Name="DepartementCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Get_Employee_Of_Department_Using_table" ReturnType="Collection(developpers_dbModel.SP_Get_Employee_Of_Department_Using_table_Result)">
+            <Parameter Name="EmployeeId" Mode="In" Type="String" />
+            <Parameter Name="DepartementCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_Insert_Employee" />
+          <FunctionImport Name="SP_Insert_Or_Update_Employee" />
+          <FunctionImport Name="SP_Insert_OutOfOffices_History">
+            <Parameter Name="UserLogin" Mode="In" Type="String" />
+            <Parameter Name="Action" Mode="In" Type="String" />
+            <Parameter Name="Comment" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="SP_Check_Aims_NoAccess_Result">
+          <Property Type="String" Name="EmployeeId" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Login" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="350" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DepartmentCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TelephoneNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Company" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="sources" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Alignement" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="AIMS_Group" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_AD_User_Result">
+          <Property Type="String" Name="Samaccountname" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="350" />
+          <Property Type="String" Name="EmployeeID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MobilePhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IPPhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Department" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Mail" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="TypeLdap" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Modified" Nullable="true" />
+          <Property Type="String" Name="Groups" Nullable="true" />
+          <Property Type="DateTime" Name="LastLogon" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_AMT_Site_Result">
+          <Property Type="String" Name="SiteID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SiteDescription" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Department_Result">
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="LongDescription" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="ShortDescription" Nullable="false" MaxLength="35" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Employee_Result">
+          <Property Type="String" Name="EmployeeId" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Login" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DepartmentCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TelephoneNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Company" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="CostCenter" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Mail" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="DisplayName" Nullable="true" MaxLength="350" />
+          <Property Type="String" Name="Jobtitle" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactNameEng" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactNameAD" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="CompanyDescription" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TelephoneNumberAD" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="BirthDate" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="DateEngaged" Nullable="false" Precision="16" />
+          <Property Type="String" Name="Gender" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="MaritalStatus" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="PositionCode" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="PassportNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PassportCountryCode" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="PositionID" Nullable="true" />
+          <Property Type="String" Name="JobGradeCode" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ReportToEmployeeID" Nullable="true" />
+          <Property Type="String" Name="ReportsToEmployeeDisplay" Nullable="false" MaxLength="118" />
+          <Property Type="String" Name="LocalisationCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Localisation" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="AreaCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ActivityCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Activity" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DeptDivisionCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DeptDivision" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Departement" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DepartmentCodeAD" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="DivisionCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Division" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ServiceCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Service" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EquipeCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Equipe" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CostCenterDescription" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Responsibility" Nullable="true" MaxLength="63" />
+          <Property Type="String" Name="IPPhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LanguageCode" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="LastLogon" Nullable="true" />
+          <Property Type="String" Name="Groups" Nullable="true" />
+          <Property Type="String" Name="ApproverEmployeeCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverFirstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApproverLastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApproverPositionDesc" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ApproverJobGrade" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverCompanyRuleCode" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EmployeeStatusID" Nullable="true" />
+          <Property Type="String" Name="ApproverDeptDivision" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverDepartmentCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Sources" Nullable="false" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Employee_Contractor_Result">
+          <Property Type="String" Name="EmployeeCode" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FirstNames" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Company" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Level2Id" Nullable="false" />
+          <Property Type="String" Name="Level2Name" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Level1Name" Nullable="false" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Employee_Dependent_Result">
+          <Property Type="String" Name="EmployeeID" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="Login" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Dependent_Name" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Relation" Nullable="false" MaxLength="8" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Employee_Of_Department_Result">
+          <Property Type="String" Name="EmployeeId" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Login" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="350" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DepartmentCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TelephoneNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Company" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="CostCenter" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Mail" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="DisplayName" Nullable="true" MaxLength="350" />
+          <Property Type="String" Name="Jobtitle" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactNameEng" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactNameAD" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="CompanyDescription" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TelephoneNumberAD" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="BirthDate" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="DateEngaged" Nullable="false" Precision="16" />
+          <Property Type="String" Name="Gender" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="MaritalStatus" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="PositionCode" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="PassportNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PassportCountryCode" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="PositionID" Nullable="true" />
+          <Property Type="String" Name="Category" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="JobGradeCode" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ReportToEmployeeID" Nullable="true" />
+          <Property Type="String" Name="ReportsToEmployeeDisplay" Nullable="false" MaxLength="118" />
+          <Property Type="String" Name="LocalisationCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Localisation" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="AreaCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ActivityCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Activity" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Departement" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DeptDivisionCode" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="DeptDivision" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DepartmentCodeAD" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="DivisionCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Division" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ServiceCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Service" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EquipeCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Equipe" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CostCenterDescription" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Responsibility" Nullable="true" MaxLength="63" />
+          <Property Type="String" Name="IPPhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LanguageCode" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="LastLogon" Nullable="true" />
+          <Property Type="String" Name="Groups" Nullable="true" />
+          <Property Type="String" Name="ApproverEmployeeCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverFirstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApproverLastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApproverPositionDesc" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ApproverJobGrade" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverCompanyRuleCode" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EmployeeStatusID" Nullable="true" />
+          <Property Type="String" Name="ApproverDepartmentCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverDeptDivision" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Sources" Nullable="false" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Employee_Process_Role_Result">
+          <Property Type="String" Name="Application" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="ModuleID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="UserLogin" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Role" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_EmployeeByLogin_Result">
+          <Property Type="String" Name="EmployeeId" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Login" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="350" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DepartmentCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TelephoneNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Company" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="CostCenter" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Mail" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="DisplayName" Nullable="true" MaxLength="350" />
+          <Property Type="String" Name="Jobtitle" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactNameEng" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactNameAD" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="CompanyDescription" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TelephoneNumberAD" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="BirthDate" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="DateEngaged" Nullable="false" Precision="16" />
+          <Property Type="String" Name="Gender" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="MaritalStatus" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="PositionCode" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="PassportNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PassportCountryCode" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="PositionID" Nullable="true" />
+          <Property Type="String" Name="Category" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="JobGradeCode" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ReportToEmployeeID" Nullable="true" />
+          <Property Type="String" Name="ReportsToEmployeeDisplay" Nullable="false" MaxLength="118" />
+          <Property Type="String" Name="LocalisationCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Localisation" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="AreaCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ActivityCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Activity" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Departement" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DeptDivisionCode" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="DeptDivision" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DepartmentCodeAD" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="DivisionCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Division" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ServiceCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Service" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EquipeCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Equipe" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CostCenterDescription" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Responsibility" Nullable="true" MaxLength="63" />
+          <Property Type="String" Name="IPPhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LanguageCode" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="LastLogon" Nullable="true" />
+          <Property Type="String" Name="Groups" Nullable="true" />
+          <Property Type="String" Name="ApproverEmployeeCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverFirstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApproverLastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApproverPositionDesc" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ApproverJobGrade" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverCompanyRuleCode" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EmployeeStatusID" Nullable="true" />
+          <Property Type="String" Name="ApproverDepartmentCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverDeptDivision" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Sources" Nullable="false" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Group_Result">
+          <Property Type="String" Name="groupname" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="groupDisplayname" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="groupMail" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_GroupsWithMails_Result">
+          <Property Type="String" Name="groupname" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="groupDisplayname" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="groupMail" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Module_ByUser_Result">
+          <Property Type="String" Name="Application" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="ModuleID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ModuleDescription" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_OutOfOffices_ByUser_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="FromEmployeeID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="FromUser" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="ToEmployeeID" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ToUser" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Module" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Role" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="EndDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="StatusID" Nullable="true" />
+          <Property Type="String" Name="Comment" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="Createdate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Syspro_CostCenter_Result">
+          <Property Type="String" Name="CostCentre" Nullable="true" />
+          <Property Type="String" Name="CostCentreDescription" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_GetAll_Groups_Result">
+          <Property Type="String" Name="groupname" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="groupDisplayname" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="groupMail" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_GetAll_Ldap_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="ldap" Nullable="true" />
+          <Property Type="String" Name="TypeLdap" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_GetAllUsers_Result">
+          <Property Type="String" Name="Samaccountname" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="350" />
+          <Property Type="String" Name="EmployeeID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MobilePhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IPPhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Department" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Mail" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="TypeLdap" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Modified" Nullable="true" />
+          <Property Type="String" Name="Groups" Nullable="true" />
+          <Property Type="DateTime" Name="LastLogon" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_GetUserByEmployeeID_Result">
+          <Property Type="String" Name="Samaccountname" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="350" />
+          <Property Type="String" Name="EmployeeID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MobilePhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IPPhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Department" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Mail" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="TypeLdap" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Modified" Nullable="true" />
+          <Property Type="String" Name="Groups" Nullable="true" />
+          <Property Type="DateTime" Name="LastLogon" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_GetUserByLogin_Result">
+          <Property Type="String" Name="Samaccountname" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="350" />
+          <Property Type="String" Name="EmployeeID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MobilePhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IPPhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Department" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Title" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Mail" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="TypeLdap" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Modified" Nullable="true" />
+          <Property Type="String" Name="Groups" Nullable="true" />
+          <Property Type="DateTime" Name="LastLogon" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Employee_User_Result">
+          <Property Type="String" Name="EmployeeId" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Login" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="350" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactName" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DepartmentCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TelephoneNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Company" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="CostCenter" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Mail" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="DisplayName" Nullable="true" MaxLength="350" />
+          <Property Type="String" Name="Jobtitle" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactNameEng" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EmergencyContactNameAD" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="CompanyDescription" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TelephoneNumberAD" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="BirthDate" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="DateEngaged" Nullable="false" Precision="16" />
+          <Property Type="String" Name="Gender" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="MaritalStatus" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="PositionCode" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="PassportNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PassportCountryCode" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="PositionID" Nullable="true" />
+          <Property Type="String" Name="Category" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="JobGradeCode" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ReportToEmployeeID" Nullable="true" />
+          <Property Type="String" Name="ReportsToEmployeeDisplay" Nullable="false" MaxLength="118" />
+          <Property Type="String" Name="LocalisationCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Localisation" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="AreaCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Area" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ActivityCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Activity" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Departement" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DeptDivisionCode" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="DeptDivision" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="DepartmentCodeAD" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="DivisionCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Division" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ServiceCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Service" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="EquipeCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Equipe" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="CostCenterDescription" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Responsibility" Nullable="true" MaxLength="63" />
+          <Property Type="String" Name="IPPhone" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LanguageCode" Nullable="true" MaxLength="15" />
+          <Property Type="DateTime" Name="LastLogon" Nullable="true" />
+          <Property Type="String" Name="Groups" Nullable="true" />
+          <Property Type="String" Name="ApproverEmployeeCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverFirstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApproverLastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApproverPositionDesc" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ApproverJobGrade" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverCompanyRuleCode" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="EmployeeStatusID" Nullable="true" />
+          <Property Type="String" Name="ApproverDepartmentCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="ApproverDeptDivision" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Sources" Nullable="false" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Employee_User_ORB_Result">
+          <Property Type="String" Name="EmployeeId" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Login" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="101" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EmergencyContactName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DepartmentCode" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="TelephoneNumber" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Company" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="CostCenter" Nullable="true" />
+          <Property Type="String" Name="sources" Nullable="false" MaxLength="9" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Employee_User_Other_Result">
+          <Property Type="String" Name="EmployeeId" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Login" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="101" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EmergencyContactName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DepartmentCode" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="TelephoneNumber" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Company" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="CostCenter" Nullable="true" />
+          <Property Type="String" Name="sources" Nullable="false" MaxLength="9" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Role_Other_ByUser_Result">
+          <Property Type="String" Name="ModuleID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Role" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Module_Result">
+          <Property Type="String" Name="ModuleID" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="ModuleDescription" Nullable="false" MaxLength="21" />
+          </ComplexType>
+        <ComplexType Name="SP_Get_Role_ByUser_Result">
+          <Property Type="String" Name="ModuleID" Nullable="false" MaxLength="11" />
+          <Property Type="String" Name="Role" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="Application" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="ModuleDescription" Nullable="false" MaxLength="21" />
+          <Property Type="String" Name="UserLogin" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="SubModuleID" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Employee_Of_Department_old_Result">
+          <Property Type="String" Name="EmployeeId" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Login" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="101" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EmergencyContactName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="EmergencyContactNameEng" Nullable="true" MaxLength="35" />
+          <Property Type="String" Name="DepartmentCode" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="TelephoneNumber" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="Company" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="CostCenter" Nullable="true" />
+          <Property Type="String" Name="Responsability" Nullable="true" MaxLength="63" />
+          <Property Type="String" Name="sources" Nullable="true" MaxLength="9" />
+        </ComplexType>
+        <ComplexType Name="SP_Get_Employee_Of_Department_Using_table_Result">
+          <Property Type="String" Name="EmployeeId" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="Login" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="101" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EmergencyContactName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="EmergencyContactNameEng" Nullable="true" MaxLength="35" />
+          <Property Type="String" Name="DepartmentCode" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="TelephoneNumber" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="Company" Nullable="true" MaxLength="15" />
+          <Property Type="Int32" Name="CostCenter" Nullable="true" />
+          <Property Type="String" Name="Responsability" Nullable="true" MaxLength="63" />
+          <Property Type="String" Name="sources" Nullable="true" MaxLength="9" />
+        </ComplexType>
+        <ComplexType Name="ComplexType1" />
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="developpers_dbModelStoreContainer" CdmEntityContainer="developpers_dbEntities">
+          <FunctionImportMapping FunctionName="developpers_dbModel.Store.Fct_Get_Employee_Delegation" FunctionImportName="Fct_Get_Employee_Delegation">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.Fct_Get_Employee_Delegation_Result">
+                <ScalarProperty Name="ApproverId" ColumnName="ApproverId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Add_AD_User" FunctionName="developpers_dbModel.Store.SP_Add_AD_User" />
+          <FunctionImportMapping FunctionImportName="SP_Add_Group" FunctionName="developpers_dbModel.Store.SP_Add_Group" />
+          <FunctionImportMapping FunctionImportName="SP_Delete_AD_User" FunctionName="developpers_dbModel.Store.SP_Delete_AD_User" />
+          <FunctionImportMapping FunctionImportName="SP_Delete_Group" FunctionName="developpers_dbModel.Store.SP_Delete_Group" />
+          <FunctionImportMapping FunctionImportName="SP_Get_AD_User" FunctionName="developpers_dbModel.Store.SP_Get_AD_User">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_AD_User_Result">
+                <ScalarProperty Name="Samaccountname" ColumnName="Samaccountname" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="IPPhone" ColumnName="IPPhone" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="TypeLdap" ColumnName="TypeLdap" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Groups" ColumnName="Groups" />
+                <ScalarProperty Name="LastLogon" ColumnName="LastLogon" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_AMT_Equipment" FunctionName="developpers_dbModel.Store.SP_Get_AMT_Equipment" />
+          <FunctionImportMapping FunctionImportName="SP_Get_AMT_Fleet" FunctionName="developpers_dbModel.Store.SP_Get_AMT_Fleet" />
+          <FunctionImportMapping FunctionImportName="SP_Get_AMT_Site" FunctionName="developpers_dbModel.Store.SP_Get_AMT_Site">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_AMT_Site_Result">
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="SiteDescription" ColumnName="SiteDescription" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_Company" FunctionName="developpers_dbModel.Store.SP_Get_Company" />
+          <FunctionImportMapping FunctionImportName="SP_Get_Department" FunctionName="developpers_dbModel.Store.SP_Get_Department">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_Department_Result">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="LongDescription" ColumnName="LongDescription" />
+                <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_Employee" FunctionName="developpers_dbModel.Store.SP_Get_Employee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_Employee_Result">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="EmergencyContactName" ColumnName="EmergencyContactName" />
+                <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+                <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="CostCenter" ColumnName="CostCenter" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="Jobtitle" ColumnName="Jobtitle" />
+                <ScalarProperty Name="EmergencyContactNameEng" ColumnName="EmergencyContactNameEng" />
+                <ScalarProperty Name="EmergencyContactNameAD" ColumnName="EmergencyContactNameAD" />
+                <ScalarProperty Name="CompanyDescription" ColumnName="CompanyDescription" />
+                <ScalarProperty Name="TelephoneNumberAD" ColumnName="TelephoneNumberAD" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="DateEngaged" ColumnName="DateEngaged" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="PositionCode" ColumnName="PositionCode" />
+                <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+                <ScalarProperty Name="PassportCountryCode" ColumnName="PassportCountryCode" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="JobGradeCode" ColumnName="JobGradeCode" />
+                <ScalarProperty Name="ReportToEmployeeID" ColumnName="ReportToEmployeeID" />
+                <ScalarProperty Name="ReportsToEmployeeDisplay" ColumnName="ReportsToEmployeeDisplay" />
+                <ScalarProperty Name="LocalisationCode" ColumnName="LocalisationCode" />
+                <ScalarProperty Name="Localisation" ColumnName="Localisation" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="ActivityCode" ColumnName="ActivityCode" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="DeptDivisionCode" ColumnName="DeptDivisionCode" />
+                <ScalarProperty Name="DeptDivision" ColumnName="DeptDivision" />
+                <ScalarProperty Name="Departement" ColumnName="Departement" />
+                <ScalarProperty Name="DepartmentCodeAD" ColumnName="DepartmentCodeAD" />
+                <ScalarProperty Name="DivisionCode" ColumnName="DivisionCode" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="ServiceCode" ColumnName="ServiceCode" />
+                <ScalarProperty Name="Service" ColumnName="Service" />
+                <ScalarProperty Name="EquipeCode" ColumnName="EquipeCode" />
+                <ScalarProperty Name="Equipe" ColumnName="Equipe" />
+                <ScalarProperty Name="CostCenterDescription" ColumnName="CostCenterDescription" />
+                <ScalarProperty Name="Responsibility" ColumnName="Responsibility" />
+                <ScalarProperty Name="IPPhone" ColumnName="IPPhone" />
+                <ScalarProperty Name="LanguageCode" ColumnName="LanguageCode" />
+                <ScalarProperty Name="LastLogon" ColumnName="LastLogon" />
+                <ScalarProperty Name="Groups" ColumnName="Groups" />
+                <ScalarProperty Name="ApproverEmployeeCode" ColumnName="ApproverEmployeeCode" />
+                <ScalarProperty Name="ApproverFirstName" ColumnName="ApproverFirstName" />
+                <ScalarProperty Name="ApproverLastName" ColumnName="ApproverLastName" />
+                <ScalarProperty Name="ApproverPositionDesc" ColumnName="ApproverPositionDesc" />
+                <ScalarProperty Name="ApproverJobGrade" ColumnName="ApproverJobGrade" />
+                <ScalarProperty Name="ApproverCompanyRuleCode" ColumnName="ApproverCompanyRuleCode" />
+                <ScalarProperty Name="EmployeeStatusID" ColumnName="EmployeeStatusID" />
+                <ScalarProperty Name="ApproverDeptDivision" ColumnName="ApproverDeptDivision" />
+                <ScalarProperty Name="ApproverDepartmentCode" ColumnName="ApproverDepartmentCode" />
+                <ScalarProperty Name="Sources" ColumnName="Sources" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_Employee_Contractor" FunctionName="developpers_dbModel.Store.SP_Get_Employee_Contractor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_Employee_Contractor_Result">
+                <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstNames" ColumnName="FirstNames" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Level2Id" ColumnName="Level2Id" />
+                <ScalarProperty Name="Level2Name" ColumnName="Level2Name" />
+                <ScalarProperty Name="Level1Name" ColumnName="Level1Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_Employee_Dependent" FunctionName="developpers_dbModel.Store.SP_Get_Employee_Dependent">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_Employee_Dependent_Result">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Dependent_Name" ColumnName="Dependent_Name" />
+                <ScalarProperty Name="Relation" ColumnName="Relation" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_Employee_Of_Department" FunctionName="developpers_dbModel.Store.SP_Get_Employee_Of_Department">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_Employee_Of_Department_Result">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="EmergencyContactName" ColumnName="EmergencyContactName" />
+                <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+                <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="CostCenter" ColumnName="CostCenter" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="Jobtitle" ColumnName="Jobtitle" />
+                <ScalarProperty Name="EmergencyContactNameEng" ColumnName="EmergencyContactNameEng" />
+                <ScalarProperty Name="EmergencyContactNameAD" ColumnName="EmergencyContactNameAD" />
+                <ScalarProperty Name="CompanyDescription" ColumnName="CompanyDescription" />
+                <ScalarProperty Name="TelephoneNumberAD" ColumnName="TelephoneNumberAD" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="DateEngaged" ColumnName="DateEngaged" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="PositionCode" ColumnName="PositionCode" />
+                <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+                <ScalarProperty Name="PassportCountryCode" ColumnName="PassportCountryCode" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="JobGradeCode" ColumnName="JobGradeCode" />
+                <ScalarProperty Name="ReportToEmployeeID" ColumnName="ReportToEmployeeID" />
+                <ScalarProperty Name="ReportsToEmployeeDisplay" ColumnName="ReportsToEmployeeDisplay" />
+                <ScalarProperty Name="LocalisationCode" ColumnName="LocalisationCode" />
+                <ScalarProperty Name="Localisation" ColumnName="Localisation" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="ActivityCode" ColumnName="ActivityCode" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="Departement" ColumnName="Departement" />
+                <ScalarProperty Name="DeptDivisionCode" ColumnName="DeptDivisionCode" />
+                <ScalarProperty Name="DeptDivision" ColumnName="DeptDivision" />
+                <ScalarProperty Name="DepartmentCodeAD" ColumnName="DepartmentCodeAD" />
+                <ScalarProperty Name="DivisionCode" ColumnName="DivisionCode" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="ServiceCode" ColumnName="ServiceCode" />
+                <ScalarProperty Name="Service" ColumnName="Service" />
+                <ScalarProperty Name="EquipeCode" ColumnName="EquipeCode" />
+                <ScalarProperty Name="Equipe" ColumnName="Equipe" />
+                <ScalarProperty Name="CostCenterDescription" ColumnName="CostCenterDescription" />
+                <ScalarProperty Name="Responsibility" ColumnName="Responsibility" />
+                <ScalarProperty Name="IPPhone" ColumnName="IPPhone" />
+                <ScalarProperty Name="LanguageCode" ColumnName="LanguageCode" />
+                <ScalarProperty Name="LastLogon" ColumnName="LastLogon" />
+                <ScalarProperty Name="Groups" ColumnName="Groups" />
+                <ScalarProperty Name="ApproverEmployeeCode" ColumnName="ApproverEmployeeCode" />
+                <ScalarProperty Name="ApproverFirstName" ColumnName="ApproverFirstName" />
+                <ScalarProperty Name="ApproverLastName" ColumnName="ApproverLastName" />
+                <ScalarProperty Name="ApproverPositionDesc" ColumnName="ApproverPositionDesc" />
+                <ScalarProperty Name="ApproverJobGrade" ColumnName="ApproverJobGrade" />
+                <ScalarProperty Name="ApproverCompanyRuleCode" ColumnName="ApproverCompanyRuleCode" />
+                <ScalarProperty Name="EmployeeStatusID" ColumnName="EmployeeStatusID" />
+                <ScalarProperty Name="ApproverDepartmentCode" ColumnName="ApproverDepartmentCode" />
+                <ScalarProperty Name="ApproverDeptDivision" ColumnName="ApproverDeptDivision" />
+                <ScalarProperty Name="Sources" ColumnName="Sources" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_EmployeeByLogin" FunctionName="developpers_dbModel.Store.SP_Get_EmployeeByLogin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_EmployeeByLogin_Result">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="EmergencyContactName" ColumnName="EmergencyContactName" />
+                <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+                <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="CostCenter" ColumnName="CostCenter" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="Jobtitle" ColumnName="Jobtitle" />
+                <ScalarProperty Name="EmergencyContactNameEng" ColumnName="EmergencyContactNameEng" />
+                <ScalarProperty Name="EmergencyContactNameAD" ColumnName="EmergencyContactNameAD" />
+                <ScalarProperty Name="CompanyDescription" ColumnName="CompanyDescription" />
+                <ScalarProperty Name="TelephoneNumberAD" ColumnName="TelephoneNumberAD" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="DateEngaged" ColumnName="DateEngaged" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="PositionCode" ColumnName="PositionCode" />
+                <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+                <ScalarProperty Name="PassportCountryCode" ColumnName="PassportCountryCode" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="JobGradeCode" ColumnName="JobGradeCode" />
+                <ScalarProperty Name="ReportToEmployeeID" ColumnName="ReportToEmployeeID" />
+                <ScalarProperty Name="ReportsToEmployeeDisplay" ColumnName="ReportsToEmployeeDisplay" />
+                <ScalarProperty Name="LocalisationCode" ColumnName="LocalisationCode" />
+                <ScalarProperty Name="Localisation" ColumnName="Localisation" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="ActivityCode" ColumnName="ActivityCode" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="Departement" ColumnName="Departement" />
+                <ScalarProperty Name="DeptDivisionCode" ColumnName="DeptDivisionCode" />
+                <ScalarProperty Name="DeptDivision" ColumnName="DeptDivision" />
+                <ScalarProperty Name="DepartmentCodeAD" ColumnName="DepartmentCodeAD" />
+                <ScalarProperty Name="DivisionCode" ColumnName="DivisionCode" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="ServiceCode" ColumnName="ServiceCode" />
+                <ScalarProperty Name="Service" ColumnName="Service" />
+                <ScalarProperty Name="EquipeCode" ColumnName="EquipeCode" />
+                <ScalarProperty Name="Equipe" ColumnName="Equipe" />
+                <ScalarProperty Name="CostCenterDescription" ColumnName="CostCenterDescription" />
+                <ScalarProperty Name="Responsibility" ColumnName="Responsibility" />
+                <ScalarProperty Name="IPPhone" ColumnName="IPPhone" />
+                <ScalarProperty Name="LanguageCode" ColumnName="LanguageCode" />
+                <ScalarProperty Name="LastLogon" ColumnName="LastLogon" />
+                <ScalarProperty Name="Groups" ColumnName="Groups" />
+                <ScalarProperty Name="ApproverEmployeeCode" ColumnName="ApproverEmployeeCode" />
+                <ScalarProperty Name="ApproverFirstName" ColumnName="ApproverFirstName" />
+                <ScalarProperty Name="ApproverLastName" ColumnName="ApproverLastName" />
+                <ScalarProperty Name="ApproverPositionDesc" ColumnName="ApproverPositionDesc" />
+                <ScalarProperty Name="ApproverJobGrade" ColumnName="ApproverJobGrade" />
+                <ScalarProperty Name="ApproverCompanyRuleCode" ColumnName="ApproverCompanyRuleCode" />
+                <ScalarProperty Name="EmployeeStatusID" ColumnName="EmployeeStatusID" />
+                <ScalarProperty Name="ApproverDepartmentCode" ColumnName="ApproverDepartmentCode" />
+                <ScalarProperty Name="ApproverDeptDivision" ColumnName="ApproverDeptDivision" />
+                <ScalarProperty Name="Sources" ColumnName="Sources" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_Group" FunctionName="developpers_dbModel.Store.SP_Get_Group">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_Group_Result">
+                <ScalarProperty Name="groupname" ColumnName="groupname" />
+                <ScalarProperty Name="groupDisplayname" ColumnName="groupDisplayname" />
+                <ScalarProperty Name="groupMail" ColumnName="groupMail" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_Syspro_CostCenter" FunctionName="developpers_dbModel.Store.SP_Get_Syspro_CostCenter">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_Syspro_CostCenter_Result">
+                <ScalarProperty Name="CostCentre" ColumnName="CostCentre" />
+                <ScalarProperty Name="CostCentreDescription" ColumnName="CostCentreDescription" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_Syspro_CostCenter_Of_Department" FunctionName="developpers_dbModel.Store.SP_Get_Syspro_CostCenter_Of_Department" />
+          <FunctionImportMapping FunctionImportName="SP_Get_User_Image" FunctionName="developpers_dbModel.Store.SP_Get_User_Image" />
+          <FunctionImportMapping FunctionImportName="SP_GetAll_Groups" FunctionName="developpers_dbModel.Store.SP_GetAll_Groups">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_GetAll_Groups_Result">
+                <ScalarProperty Name="groupname" ColumnName="groupname" />
+                <ScalarProperty Name="groupDisplayname" ColumnName="groupDisplayname" />
+                <ScalarProperty Name="groupMail" ColumnName="groupMail" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_GetAll_Ldap" FunctionName="developpers_dbModel.Store.SP_GetAll_Ldap">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_GetAll_Ldap_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ldap" ColumnName="ldap" />
+                <ScalarProperty Name="TypeLdap" ColumnName="TypeLdap" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_GetAllUsers" FunctionName="developpers_dbModel.Store.SP_GetAllUsers">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_GetAllUsers_Result">
+                <ScalarProperty Name="Samaccountname" ColumnName="Samaccountname" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="IPPhone" ColumnName="IPPhone" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="TypeLdap" ColumnName="TypeLdap" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Groups" ColumnName="Groups" />
+                <ScalarProperty Name="LastLogon" ColumnName="LastLogon" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_GetAllUsersWithPicture" FunctionName="developpers_dbModel.Store.SP_GetAllUsersWithPicture" />
+          <FunctionImportMapping FunctionImportName="SP_GetUserByEmployeeID" FunctionName="developpers_dbModel.Store.SP_GetUserByEmployeeID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_GetUserByEmployeeID_Result">
+                <ScalarProperty Name="Samaccountname" ColumnName="Samaccountname" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="IPPhone" ColumnName="IPPhone" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="TypeLdap" ColumnName="TypeLdap" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Groups" ColumnName="Groups" />
+                <ScalarProperty Name="LastLogon" ColumnName="LastLogon" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_GetUserByLogin" FunctionName="developpers_dbModel.Store.SP_GetUserByLogin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_GetUserByLogin_Result">
+                <ScalarProperty Name="Samaccountname" ColumnName="Samaccountname" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="IPPhone" ColumnName="IPPhone" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="TypeLdap" ColumnName="TypeLdap" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Groups" ColumnName="Groups" />
+                <ScalarProperty Name="LastLogon" ColumnName="LastLogon" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Insert_OutOfOffices" FunctionName="developpers_dbModel.Store.SP_Insert_OutOfOffices" />
+          <FunctionImportMapping FunctionImportName="SP_Job_Send_Mail_Reminder_Delegation" FunctionName="developpers_dbModel.Store.SP_Job_Send_Mail_Reminder_Delegation" />
+          <FunctionImportMapping FunctionImportName="SP_Send_Mail" FunctionName="developpers_dbModel.Store.SP_Send_Mail" />
+          <FunctionImportMapping FunctionImportName="SP_Send_Mail_Service_Request_Saysaid" FunctionName="developpers_dbModel.Store.SP_Send_Mail_Service_Request_Saysaid" />
+          <FunctionImportMapping FunctionImportName="SP_Update_Add_AD_User" FunctionName="developpers_dbModel.Store.SP_Update_Add_AD_User" />
+          <FunctionImportMapping FunctionImportName="SP_Update_OutOfOffices_Status" FunctionName="developpers_dbModel.Store.SP_Update_OutOfOffices_Status" />
+          <FunctionImportMapping FunctionImportName="SP_Get_Employee_User" FunctionName="developpers_dbModel.Store.SP_Get_Employee_User">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_Employee_User_Result">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="EmergencyContactName" ColumnName="EmergencyContactName" />
+                <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+                <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="CostCenter" ColumnName="CostCenter" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="Jobtitle" ColumnName="Jobtitle" />
+                <ScalarProperty Name="EmergencyContactNameEng" ColumnName="EmergencyContactNameEng" />
+                <ScalarProperty Name="EmergencyContactNameAD" ColumnName="EmergencyContactNameAD" />
+                <ScalarProperty Name="CompanyDescription" ColumnName="CompanyDescription" />
+                <ScalarProperty Name="TelephoneNumberAD" ColumnName="TelephoneNumberAD" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="DateEngaged" ColumnName="DateEngaged" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="PositionCode" ColumnName="PositionCode" />
+                <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+                <ScalarProperty Name="PassportCountryCode" ColumnName="PassportCountryCode" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="JobGradeCode" ColumnName="JobGradeCode" />
+                <ScalarProperty Name="ReportToEmployeeID" ColumnName="ReportToEmployeeID" />
+                <ScalarProperty Name="ReportsToEmployeeDisplay" ColumnName="ReportsToEmployeeDisplay" />
+                <ScalarProperty Name="LocalisationCode" ColumnName="LocalisationCode" />
+                <ScalarProperty Name="Localisation" ColumnName="Localisation" />
+                <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="ActivityCode" ColumnName="ActivityCode" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="Departement" ColumnName="Departement" />
+                <ScalarProperty Name="DeptDivisionCode" ColumnName="DeptDivisionCode" />
+                <ScalarProperty Name="DeptDivision" ColumnName="DeptDivision" />
+                <ScalarProperty Name="DepartmentCodeAD" ColumnName="DepartmentCodeAD" />
+                <ScalarProperty Name="DivisionCode" ColumnName="DivisionCode" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="ServiceCode" ColumnName="ServiceCode" />
+                <ScalarProperty Name="Service" ColumnName="Service" />
+                <ScalarProperty Name="EquipeCode" ColumnName="EquipeCode" />
+                <ScalarProperty Name="Equipe" ColumnName="Equipe" />
+                <ScalarProperty Name="CostCenterDescription" ColumnName="CostCenterDescription" />
+                <ScalarProperty Name="Responsibility" ColumnName="Responsibility" />
+                <ScalarProperty Name="IPPhone" ColumnName="IPPhone" />
+                <ScalarProperty Name="LanguageCode" ColumnName="LanguageCode" />
+                <ScalarProperty Name="LastLogon" ColumnName="LastLogon" />
+                <ScalarProperty Name="Groups" ColumnName="Groups" />
+                <ScalarProperty Name="ApproverEmployeeCode" ColumnName="ApproverEmployeeCode" />
+                <ScalarProperty Name="ApproverFirstName" ColumnName="ApproverFirstName" />
+                <ScalarProperty Name="ApproverLastName" ColumnName="ApproverLastName" />
+                <ScalarProperty Name="ApproverPositionDesc" ColumnName="ApproverPositionDesc" />
+                <ScalarProperty Name="ApproverJobGrade" ColumnName="ApproverJobGrade" />
+                <ScalarProperty Name="ApproverCompanyRuleCode" ColumnName="ApproverCompanyRuleCode" />
+                <ScalarProperty Name="EmployeeStatusID" ColumnName="EmployeeStatusID" />
+                <ScalarProperty Name="ApproverDepartmentCode" ColumnName="ApproverDepartmentCode" />
+                <ScalarProperty Name="ApproverDeptDivision" ColumnName="ApproverDeptDivision" />
+                <ScalarProperty Name="Sources" ColumnName="Sources" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Send_MailOutOfOffice" FunctionName="developpers_dbModel.Store.SP_Send_MailOutOfOffice" />
+          <FunctionImportMapping FunctionImportName="SP_Get_Module" FunctionName="developpers_dbModel.Store.SP_Get_Module">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_Module_Result">
+                <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+                <ScalarProperty Name="ModuleDescription" ColumnName="ModuleDescription" />
+                </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_Role_ByUser" FunctionName="developpers_dbModel.Store.SP_Get_Role_ByUser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_Role_ByUser_Result">
+                <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Application" ColumnName="Application" />
+                <ScalarProperty Name="ModuleDescription" ColumnName="ModuleDescription" />
+                <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
+                <ScalarProperty Name="SubModuleID" ColumnName="SubModuleID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Get_OutOfOffices_ByUser" FunctionName="developpers_dbModel.Store.SP_Get_OutOfOffices_ByUser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="developpers_dbModel.SP_Get_OutOfOffices_ByUser_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FromEmployeeID" ColumnName="FromEmployeeID" />
+                <ScalarProperty Name="FromUser" ColumnName="FromUser" />
+                <ScalarProperty Name="ToEmployeeID" ColumnName="ToEmployeeID" />
+                <ScalarProperty Name="ToUser" ColumnName="ToUser" />
+                <ScalarProperty Name="Module" ColumnName="Module" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_Insert_OutOfOffices_History" FunctionName="developpers_dbModel.Store.SP_Insert_OutOfOffices_History" />
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
